@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://rar-consultant.vercel.app/sitemap.xml
+Sitemap: https://rarconsultant.co.in/sitemap.xml

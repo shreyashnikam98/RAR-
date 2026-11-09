@@ -177,16 +177,15 @@ function initFaqAccordion() {
 }
 
 /* ----------------------------------------------------
- * 4. CONTACT FORM & WEB3FORMS INTEGRATION
+ * 4. CONTACT FORM & PHP MAILER INTEGRATION
  * ---------------------------------------------------- */
 function initContactForm() {
   const form = document.getElementById('contact-form');
   if (!form) return;
 
-  const WEB3FORMS_URL = 'https://api.web3forms.com/submit';
-  const ACCESS_KEY = '8b67ad90-469d-40af-b193-a644112dc3db';
+  const MAILER_ENDPOINT = 'api/contact-mailer.php';
   const THROTTLE_KEY = 'rar_enquiry_sent_at';
-  const THROTTLE_MS = 60000;
+  const THROTTLE_MS = 30000;
 
   // Pre-select service from URL param
   const urlParams = new URLSearchParams(window.location.search);
@@ -294,7 +293,7 @@ function initContactForm() {
     const nameVal = fullName.value.trim();
     if (!nameVal) setError(fullName, 'fullName-error', 'Please include your name.');
     else if (nameVal.length < 2) setError(fullName, 'fullName-error', 'Please enter at least 2 characters.');
-    else if (nameVal.length > 60) setError(fullName, 'fullName-error', 'Please keep your name under 60 characters.');
+    else if (nameVal.length > 80) setError(fullName, 'fullName-error', 'Please keep your name under 80 characters.');
     else if (!/^[\p{L} .'-]+$/u.test(nameVal)) setError(fullName, 'fullName-error', "Use letters, spaces, dots, hyphens, or apostrophes only.");
     else setError(fullName, 'fullName-error', '');
 
@@ -335,54 +334,42 @@ function initContactForm() {
 
     if (!isValid) return;
 
-    // Honeypot check
     const successBanner = document.getElementById('success-banner');
+    const successTitle = document.getElementById('success-banner-title');
+    const successText = document.getElementById('success-banner-text');
     const errorBanner = document.getElementById('error-banner');
     const errorText = document.getElementById('error-banner-text');
 
+    // Honeypot bot check
     if (botcheck && botcheck.value) {
       if (successBanner) successBanner.classList.remove('hidden');
       form.reset();
       return;
     }
 
-    // Prepare payload
-    function formatIndiaTime() {
-      return `${new Intl.DateTimeFormat('en-IN', {
-        timeZone: 'Asia/Kolkata',
-        year: 'numeric',
-        month: '2-digit',
-        day: '2-digit',
-        hour: '2-digit',
-        minute: '2-digit',
-        second: '2-digit',
-        hour12: true,
-      }).format(new Date())} IST`;
-    }
-
     function formatMobile(num) {
       const d = num.replace(/\D/g, '');
-      if (d.length === 10) return `+91${d}`;
-      if (d.length === 12 && d.startsWith('91')) return `+${d}`;
-      if (d.length === 11 && d.startsWith('0')) return `+91${d.slice(1)}`;
-      const c = num.replace(/[\s-]/g, '').trim();
-      return c.startsWith('+') ? c : `+${c}`;
+      if (d.length === 10) return `+91 ${d}`;
+      return `+${d}`;
     }
 
-    const payload = {
-      access_key: ACCESS_KEY,
-      subject: `New Enquiry from ${nameVal} – ${service.value} | RAR Consultant Website`,
-      from_name: 'RAR Consultant Website',
-      name: nameVal,
-      mobile: formatMobile(mobVal),
-      email: emailVal,
-      service: service.value,
-      message: msgVal,
-      consent: 'Yes',
-      consent_timestamp_ist: formatIndiaTime(),
-      consent_version: 'v1.0',
-      botcheck: ''
-    };
+    // Build FormData payload compatible with demo1.rarconsultant.co.in backend
+    const formData = new FormData();
+    formData.append('full_name', nameVal);
+    formData.append('mobile_number', formatMobile(mobVal));
+    formData.append('corp_email', emailVal);
+    formData.append('practice_domain', service.value);
+    formData.append('scope_overview', msgVal);
+    formData.append('dpdp_consent', '1');
+    formData.append('honeypot_node', botcheck ? botcheck.value : '');
+
+    // Classic aliases for fallback
+    formData.append('name', nameVal);
+    formData.append('mobile', formatMobile(mobVal));
+    formData.append('email', emailVal);
+    formData.append('service', service.value);
+    formData.append('message', msgVal);
+    formData.append('consent', 'Yes');
 
     // Loading state
     if (submitBtn) {
@@ -392,7 +379,7 @@ function initContactForm() {
           <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
           <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path>
         </svg>
-        <span>Sending…</span>
+        <span>Sending enquiry…</span>
       `;
     }
 
@@ -401,40 +388,55 @@ function initContactForm() {
 
     try {
       const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 12000);
+      const timeoutId = setTimeout(() => controller.abort(), 15000);
 
-      const res = await fetch(WEB3FORMS_URL, {
+      const res = await fetch(MAILER_ENDPOINT, {
         method: 'POST',
+        body: formData,
         headers: {
-          'Content-Type': 'application/json',
-          Accept: 'application/json'
+          'Accept': 'application/json'
         },
-        body: JSON.stringify(payload),
         signal: controller.signal
       });
       clearTimeout(timeoutId);
 
-      const result = await res.json();
-      if (res.ok && result.success) {
+      let result = null;
+      try {
+        result = await res.json();
+      } catch (jsonErr) {
+        // If response is not JSON
+      }
+
+      if (res.ok && result && result.success) {
         try {
           localStorage.setItem(THROTTLE_KEY, String(Date.now()));
         } catch (e) {}
         checkThrottle();
-        if (successBanner) successBanner.classList.remove('hidden');
+
+        if (successBanner) {
+          if (successTitle) successTitle.textContent = 'Thank you! We will contact you within 24 hours.';
+          if (successText) {
+            successText.textContent = result.message || 'Your message has been sent to our consulting team. An autoreply confirmation has also been dispatched to your email address.';
+          }
+          successBanner.classList.remove('hidden');
+          successBanner.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
         form.reset();
         if (countEl) countEl.textContent = '0/500';
       } else {
         if (errorBanner && errorText) {
-          errorText.textContent = 'We could not send your enquiry right now. Please try again or use the contact options below.';
+          errorText.textContent = (result && result.message)
+            ? result.message
+            : 'Could not send your enquiry right now. Please try again or reach out directly to anand@rarconsultant.co.in or +91 91580 30333.';
           errorBanner.classList.remove('hidden');
         }
       }
     } catch (err) {
       if (errorBanner && errorText) {
         if (err.name === 'AbortError') {
-          errorText.textContent = 'The request took longer than expected, so we could not confirm delivery.';
+          errorText.textContent = 'The request took longer than expected to confirm delivery. Please verify your connection or email anand@rarconsultant.co.in directly.';
         } else {
-          errorText.textContent = 'We could not connect to the enquiry service. Please try again later.';
+          errorText.textContent = 'Could not connect to the mailer gateway. Please email us directly at anand@rarconsultant.co.in or call +91 91580 30333.';
         }
         errorBanner.classList.remove('hidden');
       }
