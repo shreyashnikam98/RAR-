@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terms and Conditions — RAR Consultant</title>
+    <meta name="description" content="These Terms and Conditions apply to your use of the RAR Consultant website and describe the general basis on which we discuss and provide services." />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="bg-white text-mainText font-sans antialiased selection:bg-secondary selection:text-white">
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-[#070D1E] py-4 sm:py-5 border-b border-white/5">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between">
+          <!-- Logo & Brand -->
+          <a href="index.html" class="flex items-center gap-3.5 group focus:outline-none focus:ring-2 focus:ring-accent rounded-xl p-1" aria-label="RAR Consultant home">
+            <div class="relative">
+              <div class="absolute -inset-1 rounded-xl bg-gradient-to-r from-blue-500 to-cyan-400 opacity-20 blur-sm group-hover:opacity-40 transition-opacity"></div>
+              <img src="logo.png" alt="RAR Consultant" class="relative h-10 w-auto object-contain transition-transform duration-200 group-hover:scale-105" />
+            </div>
+            <div class="hidden sm:block text-left">
+              <span class="block text-white font-heading font-extrabold text-lg tracking-tight leading-none group-hover:text-cyan-300 transition-colors">
+                RAR CONSULTANT
+              </span>
+              <span class="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400 text-[11px] font-bold tracking-widest uppercase mt-1">
+                Smart IT Solutions
+              </span>
+            </div>
+          </a>
+
+          <!-- Desktop Navigation Links -->
+          <nav class="hidden md:flex items-center gap-1.5 p-1 rounded-full bg-white/[0.04] border border-white/10 backdrop-blur-md">
+            <a href="index.html" class="nav-desktop-link relative px-4 py-2 rounded-full text-sm font-semibold text-slate-300 hover:text-white hover:bg-white/5 transition-all duration-200">Home</a>
+            <a href="about.html" class="nav-desktop-link relative px-4 py-2 rounded-full text-sm font-semibold text-slate-300 hover:text-white hover:bg-white/5 transition-all duration-200">About</a>
+            <a href="services.html" class="nav-desktop-link relative px-4 py-2 rounded-full text-sm font-semibold text-slate-300 hover:text-white hover:bg-white/5 transition-all duration-200">Services</a>
+            <a href="contact.html" class="nav-desktop-link relative px-4 py-2 rounded-full text-sm font-semibold text-slate-300 hover:text-white hover:bg-white/5 transition-all duration-200">Contact</a>
+          </nav>
+
+          <!-- Right Action Buttons -->
+          <div class="hidden md:flex items-center gap-4">
+            <a href="tel:+919158030333" class="flex items-center gap-2.5 text-xs font-semibold text-slate-300 hover:text-cyan-400 transition-colors py-2 px-3 rounded-full hover:bg-white/5" title="Call us directly">
+              <span class="w-8 h-8 rounded-full bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              </span>
+              <span class="hidden xl:inline">+91 91580 30333</span>
+            </a>
+
+            <a href="contact.html" class="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 hover:from-blue-500 hover:via-indigo-500 hover:to-cyan-400 text-white text-sm font-bold px-5 py-2.5 rounded-full shadow-lg shadow-blue-600/30 border border-white/20 transition-all duration-200 hover:shadow-cyan-500/25 hover:-translate-y-0.5 active:translate-y-0">
+              <span>Get a Free Quote</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <div class="flex md:hidden items-center gap-2.5">
+            <a href="contact.html" class="text-xs bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold px-3.5 py-1.5 rounded-full shadow-sm">
+              Quote
+            </a>
+            <button id="mobile-menu-btn" type="button" class="p-2 rounded-xl text-slate-300 hover:text-white bg-white/5 border border-white/10 focus:outline-none focus:ring-2 focus:ring-accent" aria-label="Toggle navigation menu" aria-expanded="false">
+              <svg id="menu-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+              <svg id="close-icon" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Drawer -->
+      <div id="mobile-menu-drawer" class="hidden md:hidden bg-[#070D1E]/98 border-t border-cyan-500/15 backdrop-blur-2xl px-5 pt-4 pb-6 space-y-4 shadow-2xl">
+        <nav class="flex flex-col space-y-1.5">
+          <a href="index.html" class="px-4 py-3 rounded-2xl text-base font-semibold flex items-center justify-between text-slate-200 hover:bg-white/5 hover:text-white transition-all">
+            <span>Home</span>
+            <svg class="w-4 h-4 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </a>
+          <a href="about.html" class="px-4 py-3 rounded-2xl text-base font-semibold flex items-center justify-between text-slate-200 hover:bg-white/5 hover:text-white transition-all">
+            <span>About</span>
+            <svg class="w-4 h-4 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </a>
+          <a href="services.html" class="px-4 py-3 rounded-2xl text-base font-semibold flex items-center justify-between text-slate-200 hover:bg-white/5 hover:text-white transition-all">
+            <span>Services</span>
+            <svg class="w-4 h-4 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </a>
+          <a href="contact.html" class="px-4 py-3 rounded-2xl text-base font-semibold flex items-center justify-between text-slate-200 hover:bg-white/5 hover:text-white transition-all">
+            <span>Contact</span>
+            <svg class="w-4 h-4 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </a>
+        </nav>
+        <div class="pt-3 border-t border-white/10 space-y-3">
+          <a href="tel:+919158030333" class="flex items-center gap-3 px-4 py-3 text-sm text-slate-300 hover:text-cyan-400 rounded-2xl bg-white/5 border border-white/5">
+            <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            <span class="font-semibold">+91 91580 30333</span>
+          </a>
+          <a href="contact.html" class="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 text-white font-bold py-3.5 rounded-2xl shadow-lg shadow-blue-500/30">
+            <span>Get a Free Quote</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main id="top" class="overflow-hidden">
+      <!-- 1. PAGE HEADER -->
+      <div class="relative pt-32 pb-16 md:pt-36 md:pb-20 bg-gradient-to-b from-[#070D1E] via-[#0C1A3A] to-[#070D1E] text-white overflow-hidden border-b border-cyan-500/10">
+        <div class="absolute top-0 right-1/4 w-[500px] h-[500px] bg-blue-600/15 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-cyan-400/15 rounded-full blur-[100px] pointer-events-none"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:28px_28px] opacity-40 pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <!-- Breadcrumb -->
+          <nav aria-label="Breadcrumb" class="flex items-center gap-2 text-xs font-semibold text-slate-300 mb-6">
+            <a href="index.html" class="hover:text-cyan-400 flex items-center gap-1.5 transition-colors">
+              <svg class="w-3.5 h-3.5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+              <span>Home</span>
+            </a>
+            <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            <span class="text-cyan-300 font-bold">Terms and Conditions</span>
+          </nav>
+
+          <!-- Eyebrow -->
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-950/50 border border-cyan-400/30 text-xs font-extrabold tracking-wider uppercase text-cyan-300 shadow-[0_0_15px_rgba(6,182,212,0.15)] mb-4">
+            <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span>
+            <span>RAR CONSULTANT / LEGAL</span>
+          </div>
+
+          <!-- Title -->
+          <h1 class="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold tracking-tight text-white max-w-4xl leading-[1.15]">
+            Terms and Conditions
+          </h1>
+
+          <!-- Description -->
+          <p class="mt-4 text-base sm:text-lg text-slate-300 max-w-2xl font-normal leading-relaxed">
+            These Terms and Conditions apply to your use of the RAR Consultant website and describe the general basis on which we discuss and provide services.
+          </p>
+        </div>
+      </div>
+
+      <!-- 2. MAIN CONTENT & SIDEBAR -->
+      <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+            <!-- Sidebar navigation -->
+            <aside class="lg:col-span-4 lg:sticky lg:top-28">
+              <div class="p-6 rounded-3xl bg-[#F8FAFC] border border-slate-200/80 shadow-sm max-h-[80vh] overflow-y-auto">
+                <p class="text-xs font-bold tracking-wider uppercase text-blue-600 mb-4 flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-cyan-500"></span>
+                  <span>ON THIS PAGE</span>
+                </p>
+
+                <nav aria-label="Terms and Conditions sections" class="space-y-1 text-xs">
+                  <a href="#acceptance-of-terms" class="flex items-start gap-2.5 py-2 px-3 rounded-xl text-slate-600 hover:text-blue-600 hover:bg-white transition-colors leading-tight font-medium">
+                    <span class="font-mono text-blue-600 text-[11px] font-bold shrink-0 mt-0.5">01</span>
+                    <span>Acceptance of terms</span>
+                  </a>
+                  <a href="#about-rar-consultant-and-the-services" class="flex items-start gap-2.5 py-2 px-3 rounded-xl text-slate-600 hover:text-blue-600 hover:bg-white transition-colors leading-tight font-medium">
+                    <span class="font-mono text-blue-600 text-[11px] font-bold shrink-0 mt-0.5">02</span>
+                    <span>About RAR Consultant and the services</span>
+                  </a>
+                  <a href="#eligibility" class="flex items-start gap-2.5 py-2 px-3 rounded-xl text-slate-600 hover:text-blue-600 hover:bg-white transition-colors leading-tight font-medium">
+                    <span class="font-mono text-blue-600 text-[11px] font-bold shrink-0 mt-0.5">03</span>
+                    <span>Eligibility</span>
+                  </a>
+                  <a href="#scope-quotations-and-engagement" class="flex items-start gap-2.5 py-2 px-3 rounded-xl text-slate-600 hover:text-blue-600 hover:bg-white transition-colors leading-tight font-medium">
+                    <span class="font-mono text-blue-600 text-[11px] font-bold shrink-0 mt-0.5">04</span>
+                    <span>Scope, quotations, and engagement</span>
+                  </a>
+                  <a href="#payment-terms-and-taxes" class="flex items-start gap-2.5 py-2 px-3 rounded-xl text-slate-600 hover:text-blue-600 hover:bg-white transition-colors leading-tight font-medium">
+                    <span class="font-mono text-blue-600 text-[11px] font-bold shrink-0 mt-0.5">05</span>
+                    <span>Payment terms and taxes</span>
+                  </a>
+                  <a href="#client-responsibilities" class="flex items-start gap-2.5 py-2 px-3 rounded-xl text-slate-600 hover:text-blue-600 hover:bg-white transition-colors leading-tight font-medium">
+                    <span class="font-mono text-blue-600 text-[11px] font-bold shrink-0 mt-0.5">06</span>
+                    <span>Client responsibilities</span>
+                  </a>
+                  <a href="#intellectual-property" class="flex items-start gap-2.5 py-2 px-3 rounded-xl text-slate-600 hover:text-blue-600 hover:bg-white transition-colors leading-tight font-medium">
+                    <span class="font-mono text-blue-600 text-[11px] font-bold shrink-0 mt-0.5">07</span>
+                    <span>Intellectual property</span>
+                  </a>
+                  <a href="#confidentiality" class="flex items-start gap-2.5 py-2 px-3 rounded-xl text-slate-600 hover:text-blue-600 hover:bg-white transition-colors leading-tight font-medium">
+                    <span class="font-mono text-blue-600 text-[11px] font-bold shrink-0 mt-0.5">08</span>
+                    <span>Confidentiality</span>
+                  </a>
+                  <a href="#revisions-and-change-requests" class="flex items-start gap-2.5 py-2 px-3 rounded-xl text-slate-600 hover:text-blue-600 hover:bg-white transition-colors leading-tight font-medium">
+                    <span class="font-mono text-blue-600 text-[11px] font-bold shrink-0 mt-0.5">09</span>
+                    <span>Revisions and change requests</span>
+                  </a>
+                  <a href="#website-maintenance-terms-and-exclusions" class="flex items-start gap-2.5 py-2 px-3 rounded-xl text-slate-600 hover:text-blue-600 hover:bg-white transition-colors leading-tight font-medium">
+                    <span class="font-mono text-blue-600 text-[11px] font-bold shrink-0 mt-0.5">10</span>
+                    <span>Website maintenance terms and exclusions</span>
+                  </a>
+                  <a href="#search-engine-optimization-disclaimer" class="flex items-start gap-2.5 py-2 px-3 rounded-xl text-slate-600 hover:text-blue-600 hover:bg-white transition-colors leading-tight font-medium">
+                    <span class="font-mono text-blue-600 text-[11px] font-bold shrink-0 mt-0.5">11</span>
+                    <span>Search engine optimization disclaimer</span>
+                  </a>
+                  <a href="#e-commerce-and-payment-gateway-disclaimer" class="flex items-start gap-2.5 py-2 px-3 rounded-xl text-slate-600 hover:text-blue-600 hover:bg-white transition-colors leading-tight font-medium">
+                    <span class="font-mono text-blue-600 text-[11px] font-bold shrink-0 mt-0.5">12</span>
+                    <span>E-commerce and payment gateway disclaimer</span>
+                  </a>
+                  <a href="#acceptable-use" class="flex items-start gap-2.5 py-2 px-3 rounded-xl text-slate-600 hover:text-blue-600 hover:bg-white transition-colors leading-tight font-medium">
+                    <span class="font-mono text-blue-600 text-[11px] font-bold shrink-0 mt-0.5">13</span>
+                    <span>Acceptable use</span>
+                  </a>
+                  <a href="#third-party-services" class="flex items-start gap-2.5 py-2 px-3 rounded-xl text-slate-600 hover:text-blue-600 hover:bg-white transition-colors leading-tight font-medium">
+                    <span class="font-mono text-blue-600 text-[11px] font-bold shrink-0 mt-0.5">14</span>
+                    <span>Third-party services</span>
+                  </a>
+                  <a href="#warranties-and-limitation-of-liability" class="flex items-start gap-2.5 py-2 px-3 rounded-xl text-slate-600 hover:text-blue-600 hover:bg-white transition-colors leading-tight font-medium">
+                    <span class="font-mono text-blue-600 text-[11px] font-bold shrink-0 mt-0.5">15</span>
+                    <span>Warranties and limitation of liability</span>
+                  </a>
+                  <a href="#indemnification" class="flex items-start gap-2.5 py-2 px-3 rounded-xl text-slate-600 hover:text-blue-600 hover:bg-white transition-colors leading-tight font-medium">
+                    <span class="font-mono text-blue-600 text-[11px] font-bold shrink-0 mt-0.5">16</span>
+                    <span>Indemnification</span>
+                  </a>
+                  <a href="#termination" class="flex items-start gap-2.5 py-2 px-3 rounded-xl text-slate-600 hover:text-blue-600 hover:bg-white transition-colors leading-tight font-medium">
+                    <span class="font-mono text-blue-600 text-[11px] font-bold shrink-0 mt-0.5">17</span>
+                    <span>Termination</span>
+                  </a>
+                  <a href="#refund-and-cancellation-policy" class="flex items-start gap-2.5 py-2 px-3 rounded-xl text-slate-600 hover:text-blue-600 hover:bg-white transition-colors leading-tight font-medium">
+                    <span class="font-mono text-blue-600 text-[11px] font-bold shrink-0 mt-0.5">18</span>
+                    <span>Refund and cancellation policy</span>
+                  </a>
+                  <a href="#force-majeure" class="flex items-start gap-2.5 py-2 px-3 rounded-xl text-slate-600 hover:text-blue-600 hover:bg-white transition-colors leading-tight font-medium">
+                    <span class="font-mono text-blue-600 text-[11px] font-bold shrink-0 mt-0.5">19</span>
+                    <span>Force majeure</span>
+                  </a>
+                  <a href="#governing-law-and-jurisdiction" class="flex items-start gap-2.5 py-2 px-3 rounded-xl text-slate-600 hover:text-blue-600 hover:bg-white transition-colors leading-tight font-medium">
+                    <span class="font-mono text-blue-600 text-[11px] font-bold shrink-0 mt-0.5">20</span>
+                    <span>Governing law and jurisdiction</span>
+                  </a>
+                  <a href="#dispute-resolution" class="flex items-start gap-2.5 py-2 px-3 rounded-xl text-slate-600 hover:text-blue-600 hover:bg-white transition-colors leading-tight font-medium">
+                    <span class="font-mono text-blue-600 text-[11px] font-bold shrink-0 mt-0.5">21</span>
+                    <span>Dispute resolution</span>
+                  </a>
+                  <a href="#changes-to-these-terms" class="flex items-start gap-2.5 py-2 px-3 rounded-xl text-slate-600 hover:text-blue-600 hover:bg-white transition-colors leading-tight font-medium">
+                    <span class="font-mono text-blue-600 text-[11px] font-bold shrink-0 mt-0.5">22</span>
+                    <span>Changes to these terms</span>
+                  </a>
+                  <a href="#contact-information" class="flex items-start gap-2.5 py-2 px-3 rounded-xl text-slate-600 hover:text-blue-600 hover:bg-white transition-colors leading-tight font-medium">
+                    <span class="font-mono text-blue-600 text-[11px] font-bold shrink-0 mt-0.5">23</span>
+                    <span>Contact information</span>
+                  </a>
+                </nav>
+              </div>
+            </aside>
+
+            <!-- Article Content -->
+            <article class="lg:col-span-8 space-y-10">
+              <!-- Last Updated badge -->
+              <div class="flex flex-wrap items-center justify-between gap-4 p-5 rounded-2xl bg-[#F8FAFC] border border-slate-200/80">
+                <div class="flex items-center gap-2 text-xs text-slate-600">
+                  <span class="font-bold text-[#0B132B]">Last updated:</span>
+                  <time datetime="2026-11-01" class="font-semibold">November 1, 2026</time>
+                </div>
+                <a href="contact.html" class="text-xs font-bold text-blue-600 hover:text-cyan-600 flex items-center gap-1 transition-colors">
+                  <span>Questions or rights requests? Contact us</span>
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </a>
+              </div>
+
+              <!-- Sections list -->
+              <div class="space-y-10">
+                <!-- Section 01 -->
+                <section id="acceptance-of-terms" class="scroll-mt-32 p-8 sm:p-10 rounded-3xl bg-white border border-slate-200/80 shadow-card-subtle space-y-4 hover:border-blue-400/40 transition-colors">
+                  <div class="flex items-center justify-between">
+                    <span class="text-xs font-mono font-bold uppercase tracking-wider text-blue-700 bg-blue-50 border border-blue-200/60 px-3 py-1 rounded-lg">
+                      SECTION 01
+                    </span>
+                    <a href="#acceptance-of-terms" class="text-slate-300 hover:text-blue-600 text-xs transition-colors font-mono" title="Direct link">#</a>
+                  </div>
+                  <h2 class="text-xl sm:text-2xl font-heading font-extrabold text-[#0B132B] pt-1">
+                    Acceptance of terms
+                  </h2>
+                  <div class="space-y-3.5 text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
+                    <p>These Terms and Conditions apply to your use of the RAR Consultant website and describe the general basis on which we discuss and provide services. By using the website, you agree to these terms. A signed or accepted project proposal may add or replace terms for that specific engagement.</p>
+                  </div>
+                </section>
+
+                <!-- Section 02 -->
+                <section id="about-rar-consultant-and-the-services" class="scroll-mt-32 p-8 sm:p-10 rounded-3xl bg-white border border-slate-200/80 shadow-card-subtle space-y-4 hover:border-blue-400/40 transition-colors">
+                  <div class="flex items-center justify-between">
+                    <span class="text-xs font-mono font-bold uppercase tracking-wider text-blue-700 bg-blue-50 border border-blue-200/60 px-3 py-1 rounded-lg">
+                      SECTION 02
+                    </span>
+                    <a href="#about-rar-consultant-and-the-services" class="text-slate-300 hover:text-blue-600 text-xs transition-colors font-mono" title="Direct link">#</a>
+                  </div>
+                  <h2 class="text-xl sm:text-2xl font-heading font-extrabold text-[#0B132B] pt-1">
+                    About RAR Consultant and the services
+                  </h2>
+                  <div class="space-y-3.5 text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
+                    <p>RAR Consultant is an Indian IT services business. Services may include website development, custom software development, search engine optimization, e-commerce platforms or portals, local business digital setup, and website maintenance. The precise deliverables depend on the written proposal or agreement for the project.</p>
+                  </div>
+                </section>
+
+                <!-- Section 03 -->
+                <section id="eligibility" class="scroll-mt-32 p-8 sm:p-10 rounded-3xl bg-white border border-slate-200/80 shadow-card-subtle space-y-4 hover:border-blue-400/40 transition-colors">
+                  <div class="flex items-center justify-between">
+                    <span class="text-xs font-mono font-bold uppercase tracking-wider text-blue-700 bg-blue-50 border border-blue-200/60 px-3 py-1 rounded-lg">
+                      SECTION 03
+                    </span>
+                    <a href="#eligibility" class="text-slate-300 hover:text-blue-600 text-xs transition-colors font-mono" title="Direct link">#</a>
+                  </div>
+                  <h2 class="text-xl sm:text-2xl font-heading font-extrabold text-[#0B132B] pt-1">
+                    Eligibility
+                  </h2>
+                  <div class="space-y-3.5 text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
+                    <p>You must be at least 18 years old to enter into a service engagement, or act with the consent and involvement of a parent or legal guardian where permitted by law. You confirm that you have authority to act for any business you represent.</p>
+                  </div>
+                </section>
+
+                <!-- Section 04 -->
+                <section id="scope-quotations-and-engagement" class="scroll-mt-32 p-8 sm:p-10 rounded-3xl bg-white border border-slate-200/80 shadow-card-subtle space-y-4 hover:border-blue-400/40 transition-colors">
+                  <div class="flex items-center justify-between">
+                    <span class="text-xs font-mono font-bold uppercase tracking-wider text-blue-700 bg-blue-50 border border-blue-200/60 px-3 py-1 rounded-lg">
+                      SECTION 04
+                    </span>
+                    <a href="#scope-quotations-and-engagement" class="text-slate-300 hover:text-blue-600 text-xs transition-colors font-mono" title="Direct link">#</a>
+                  </div>
+                  <h2 class="text-xl sm:text-2xl font-heading font-extrabold text-[#0B132B] pt-1">
+                    Scope, quotations, and engagement
+                  </h2>
+                  <div class="space-y-3.5 text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
+                    <p>A website enquiry does not create a client relationship or commit either party to a project. We discuss requirements and may provide a written quotation or proposal. An engagement begins only when the parties accept a written agreement or proposal that sets out scope, deliverables, schedule, fees, responsibilities, and other project-specific conditions. That signed or accepted document governs the actual project if it conflicts with these general terms.</p>
+                  </div>
+                </section>
+
+                <!-- Section 05 -->
+                <section id="payment-terms-and-taxes" class="scroll-mt-32 p-8 sm:p-10 rounded-3xl bg-white border border-slate-200/80 shadow-card-subtle space-y-4 hover:border-blue-400/40 transition-colors">
+                  <div class="flex items-center justify-between">
+                    <span class="text-xs font-mono font-bold uppercase tracking-wider text-blue-700 bg-blue-50 border border-blue-200/60 px-3 py-1 rounded-lg">
+                      SECTION 05
+                    </span>
+                    <a href="#payment-terms-and-taxes" class="text-slate-300 hover:text-blue-600 text-xs transition-colors font-mono" title="Direct link">#</a>
+                  </div>
+                  <h2 class="text-xl sm:text-2xl font-heading font-extrabold text-[#0B132B] pt-1">
+                    Payment terms and taxes
+                  </h2>
+                  <div class="space-y-3.5 text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
+                    <p>Fees, payment milestones, due dates, late-payment arrangements, and any applicable GST will be stated in the written proposal or agreement. Placeholder milestones: [Insert agreed advance and milestone schedule]. GST applicability will be determined according to applicable Indian law and the parties’ registration and transaction details. No fixed price is promised on this website.</p>
+                  </div>
+                </section>
+
+                <!-- Section 06 -->
+                <section id="client-responsibilities" class="scroll-mt-32 p-8 sm:p-10 rounded-3xl bg-white border border-slate-200/80 shadow-card-subtle space-y-4 hover:border-blue-400/40 transition-colors">
+                  <div class="flex items-center justify-between">
+                    <span class="text-xs font-mono font-bold uppercase tracking-wider text-blue-700 bg-blue-50 border border-blue-200/60 px-3 py-1 rounded-lg">
+                      SECTION 06
+                    </span>
+                    <a href="#client-responsibilities" class="text-slate-300 hover:text-blue-600 text-xs transition-colors font-mono" title="Direct link">#</a>
+                  </div>
+                  <h2 class="text-xl sm:text-2xl font-heading font-extrabold text-[#0B132B] pt-1">
+                    Client responsibilities
+                  </h2>
+                  <div class="space-y-3.5 text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
+                    <p>You will supply accurate project information, content, brand assets, access credentials, approvals, and feedback reasonably needed for the work. You will provide feedback within agreed review windows and ensure that materials you provide may lawfully be used for the project. Delays in content, access, payment, or decisions may affect delivery dates and scope.</p>
+                  </div>
+                </section>
+
+                <!-- Section 07 -->
+                <section id="intellectual-property" class="scroll-mt-32 p-8 sm:p-10 rounded-3xl bg-white border border-slate-200/80 shadow-card-subtle space-y-4 hover:border-blue-400/40 transition-colors">
+                  <div class="flex items-center justify-between">
+                    <span class="text-xs font-mono font-bold uppercase tracking-wider text-blue-700 bg-blue-50 border border-blue-200/60 px-3 py-1 rounded-lg">
+                      SECTION 07
+                    </span>
+                    <a href="#intellectual-property" class="text-slate-300 hover:text-blue-600 text-xs transition-colors font-mono" title="Direct link">#</a>
+                  </div>
+                  <h2 class="text-xl sm:text-2xl font-heading font-extrabold text-[#0B132B] pt-1">
+                    Intellectual property
+                  </h2>
+                  <div class="space-y-3.5 text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
+                    <p>Subject to full payment of all amounts due, ownership of project-specific deliverables will transfer as set out in the written agreement. Until payment is complete, the deliverables remain subject to the rights described in that agreement.</p>
+                    <p>Pre-existing tools, templates, know-how, open-source components, fonts, stock assets, plugins, and other third-party materials remain subject to their original owners’ terms and licenses. Where the agreement permits, RAR Consultant may identify publicly launched work in its portfolio, unless the client has agreed to confidentiality or requested otherwise in writing.</p>
+                  </div>
+                </section>
+
+                <!-- Section 08 -->
+                <section id="confidentiality" class="scroll-mt-32 p-8 sm:p-10 rounded-3xl bg-white border border-slate-200/80 shadow-card-subtle space-y-4 hover:border-blue-400/40 transition-colors">
+                  <div class="flex items-center justify-between">
+                    <span class="text-xs font-mono font-bold uppercase tracking-wider text-blue-700 bg-blue-50 border border-blue-200/60 px-3 py-1 rounded-lg">
+                      SECTION 08
+                    </span>
+                    <a href="#confidentiality" class="text-slate-300 hover:text-blue-600 text-xs transition-colors font-mono" title="Direct link">#</a>
+                  </div>
+                  <h2 class="text-xl sm:text-2xl font-heading font-extrabold text-[#0B132B] pt-1">
+                    Confidentiality
+                  </h2>
+                  <div class="space-y-3.5 text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
+                    <p>Each party will use reasonable care to protect non-public information received from the other and use it only for the engagement. This obligation does not cover information that is public without breach, independently developed, already lawfully known, or required to be disclosed by law.</p>
+                  </div>
+                </section>
+
+                <!-- Section 09 -->
+                <section id="revisions-and-change-requests" class="scroll-mt-32 p-8 sm:p-10 rounded-3xl bg-white border border-slate-200/80 shadow-card-subtle space-y-4 hover:border-blue-400/40 transition-colors">
+                  <div class="flex items-center justify-between">
+                    <span class="text-xs font-mono font-bold uppercase tracking-wider text-blue-700 bg-blue-50 border border-blue-200/60 px-3 py-1 rounded-lg">
+                      SECTION 09
+                    </span>
+                    <a href="#revisions-and-change-requests" class="text-slate-300 hover:text-blue-600 text-xs transition-colors font-mono" title="Direct link">#</a>
+                  </div>
+                  <h2 class="text-xl sm:text-2xl font-heading font-extrabold text-[#0B132B] pt-1">
+                    Revisions and change requests
+                  </h2>
+                  <div class="space-y-3.5 text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
+                    <p>The included review rounds and acceptance process will be stated in the proposal. A request that materially changes agreed scope, functionality, content, or integration may require a revised quote and timeline. We will discuss material changes before proceeding with additional work.</p>
+                  </div>
+                </section>
+
+                <!-- Section 10 -->
+                <section id="website-maintenance-terms-and-exclusions" class="scroll-mt-32 p-8 sm:p-10 rounded-3xl bg-white border border-slate-200/80 shadow-card-subtle space-y-4 hover:border-blue-400/40 transition-colors">
+                  <div class="flex items-center justify-between">
+                    <span class="text-xs font-mono font-bold uppercase tracking-wider text-blue-700 bg-blue-50 border border-blue-200/60 px-3 py-1 rounded-lg">
+                      SECTION 10
+                    </span>
+                    <a href="#website-maintenance-terms-and-exclusions" class="text-slate-300 hover:text-blue-600 text-xs transition-colors font-mono" title="Direct link">#</a>
+                  </div>
+                  <h2 class="text-xl sm:text-2xl font-heading font-extrabold text-[#0B132B] pt-1">
+                    Website maintenance terms and exclusions
+                  </h2>
+                  <div class="space-y-3.5 text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
+                    <p>Maintenance may include agreed updates, backups, security monitoring, performance tuning, content changes, and uptime support. The selected plan or proposal will define frequency, response expectations, access, and fees. Unless expressly included, maintenance excludes major redesigns, new features, third-party outages, hosting or domain charges, recovery from unauthorized changes, and work outside the agreed scope.</p>
+                  </div>
+                </section>
+
+                <!-- Section 11 -->
+                <section id="search-engine-optimization-disclaimer" class="scroll-mt-32 p-8 sm:p-10 rounded-3xl bg-white border border-slate-200/80 shadow-card-subtle space-y-4 hover:border-blue-400/40 transition-colors">
+                  <div class="flex items-center justify-between">
+                    <span class="text-xs font-mono font-bold uppercase tracking-wider text-blue-700 bg-blue-50 border border-blue-200/60 px-3 py-1 rounded-lg">
+                      SECTION 11
+                    </span>
+                    <a href="#search-engine-optimization-disclaimer" class="text-slate-300 hover:text-blue-600 text-xs transition-colors font-mono" title="Direct link">#</a>
+                  </div>
+                  <h2 class="text-xl sm:text-2xl font-heading font-extrabold text-[#0B132B] pt-1">
+                    Search engine optimization disclaimer
+                  </h2>
+                  <div class="space-y-3.5 text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
+                    <p>SEO work may include research, technical improvements, on-page updates, local profile guidance, and reporting. Search engines set their own policies and ranking systems. We do not guarantee specific rankings, traffic, leads, or timing.</p>
+                  </div>
+                </section>
+
+                <!-- Section 12 -->
+                <section id="e-commerce-and-payment-gateway-disclaimer" class="scroll-mt-32 p-8 sm:p-10 rounded-3xl bg-white border border-slate-200/80 shadow-card-subtle space-y-4 hover:border-blue-400/40 transition-colors">
+                  <div class="flex items-center justify-between">
+                    <span class="text-xs font-mono font-bold uppercase tracking-wider text-blue-700 bg-blue-50 border border-blue-200/60 px-3 py-1 rounded-lg">
+                      SECTION 12
+                    </span>
+                    <a href="#e-commerce-and-payment-gateway-disclaimer" class="text-slate-300 hover:text-blue-600 text-xs transition-colors font-mono" title="Direct link">#</a>
+                  </div>
+                  <h2 class="text-xl sm:text-2xl font-heading font-extrabold text-[#0B132B] pt-1">
+                    E-commerce and payment gateway disclaimer
+                  </h2>
+                  <div class="space-y-3.5 text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
+                    <p>E-commerce delivery may rely on third-party payment gateways, shipping services, platforms, and plugins. Their availability, approval, fees, security, and terms are controlled by those providers. The client is responsible for its products, pricing, tax treatment, fulfilment, refund rules, consumer disclosures, and regulatory compliance unless a written proposal expressly assigns a specific task to RAR Consultant.</p>
+                  </div>
+                </section>
+
+                <!-- Section 13 -->
+                <section id="acceptable-use" class="scroll-mt-32 p-8 sm:p-10 rounded-3xl bg-white border border-slate-200/80 shadow-card-subtle space-y-4 hover:border-blue-400/40 transition-colors">
+                  <div class="flex items-center justify-between">
+                    <span class="text-xs font-mono font-bold uppercase tracking-wider text-blue-700 bg-blue-50 border border-blue-200/60 px-3 py-1 rounded-lg">
+                      SECTION 13
+                    </span>
+                    <a href="#acceptable-use" class="text-slate-300 hover:text-blue-600 text-xs transition-colors font-mono" title="Direct link">#</a>
+                  </div>
+                  <h2 class="text-xl sm:text-2xl font-heading font-extrabold text-[#0B132B] pt-1">
+                    Acceptable use
+                  </h2>
+                  <div class="space-y-3.5 text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
+                    <p>You must not use the website or any deliverable to violate law, infringe rights, distribute malware, deceive users, interfere with systems, or publish unlawful or harmful content. You are responsible for ensuring that your instructions and supplied materials are lawful.</p>
+                  </div>
+                </section>
+
+                <!-- Section 14 -->
+                <section id="third-party-services" class="scroll-mt-32 p-8 sm:p-10 rounded-3xl bg-white border border-slate-200/80 shadow-card-subtle space-y-4 hover:border-blue-400/40 transition-colors">
+                  <div class="flex items-center justify-between">
+                    <span class="text-xs font-mono font-bold uppercase tracking-wider text-blue-700 bg-blue-50 border border-blue-200/60 px-3 py-1 rounded-lg">
+                      SECTION 14
+                    </span>
+                    <a href="#third-party-services" class="text-slate-300 hover:text-blue-600 text-xs transition-colors font-mono" title="Direct link">#</a>
+                  </div>
+                  <h2 class="text-xl sm:text-2xl font-heading font-extrabold text-[#0B132B] pt-1">
+                    Third-party services
+                  </h2>
+                  <div class="space-y-3.5 text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
+                    <p>Projects may integrate hosting, domains, CMS platforms, app stores, APIs, analytics, payment providers, email, or other external services. Those services are subject to third-party terms and may change or become unavailable. Unless expressly stated in an agreement, RAR Consultant does not control and is not responsible for a third party’s independent acts, pricing, or availability.</p>
+                  </div>
+                </section>
+
+                <!-- Section 15 -->
+                <section id="warranties-and-limitation-of-liability" class="scroll-mt-32 p-8 sm:p-10 rounded-3xl bg-white border border-slate-200/80 shadow-card-subtle space-y-4 hover:border-blue-400/40 transition-colors">
+                  <div class="flex items-center justify-between">
+                    <span class="text-xs font-mono font-bold uppercase tracking-wider text-blue-700 bg-blue-50 border border-blue-200/60 px-3 py-1 rounded-lg">
+                      SECTION 15
+                    </span>
+                    <a href="#warranties-and-limitation-of-liability" class="text-slate-300 hover:text-blue-600 text-xs transition-colors font-mono" title="Direct link">#</a>
+                  </div>
+                  <h2 class="text-xl sm:text-2xl font-heading font-extrabold text-[#0B132B] pt-1">
+                    Warranties and limitation of liability
+                  </h2>
+                  <div class="space-y-3.5 text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
+                    <p>Services will be provided with reasonable care and skill, subject to the written scope. Except for warranties that cannot be excluded by law or those expressly stated in a project agreement, the website and general information are provided without additional guarantees.</p>
+                    <p>To the maximum extent permitted by law, neither party is liable for indirect or consequential loss arising from the website or an engagement. Any project-specific liability cap and exclusions will be stated in the written agreement. Nothing in these terms excludes liability that cannot lawfully be excluded.</p>
+                  </div>
+                </section>
+
+                <!-- Section 16 -->
+                <section id="indemnification" class="scroll-mt-32 p-8 sm:p-10 rounded-3xl bg-white border border-slate-200/80 shadow-card-subtle space-y-4 hover:border-blue-400/40 transition-colors">
+                  <div class="flex items-center justify-between">
+                    <span class="text-xs font-mono font-bold uppercase tracking-wider text-blue-700 bg-blue-50 border border-blue-200/60 px-3 py-1 rounded-lg">
+                      SECTION 16
+                    </span>
+                    <a href="#indemnification" class="text-slate-300 hover:text-blue-600 text-xs transition-colors font-mono" title="Direct link">#</a>
+                  </div>
+                  <h2 class="text-xl sm:text-2xl font-heading font-extrabold text-[#0B132B] pt-1">
+                    Indemnification
+                  </h2>
+                  <div class="space-y-3.5 text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
+                    <p>You are responsible for claims arising from materials or instructions you supply, your unlawful use of a deliverable, or your breach of these terms, except to the extent caused by RAR Consultant’s own breach or unlawful conduct. Any detailed indemnity will be set out in the project agreement.</p>
+                  </div>
+                </section>
+
+                <!-- Section 17 -->
+                <section id="termination" class="scroll-mt-32 p-8 sm:p-10 rounded-3xl bg-white border border-slate-200/80 shadow-card-subtle space-y-4 hover:border-blue-400/40 transition-colors">
+                  <div class="flex items-center justify-between">
+                    <span class="text-xs font-mono font-bold uppercase tracking-wider text-blue-700 bg-blue-50 border border-blue-200/60 px-3 py-1 rounded-lg">
+                      SECTION 17
+                    </span>
+                    <a href="#termination" class="text-slate-300 hover:text-blue-600 text-xs transition-colors font-mono" title="Direct link">#</a>
+                  </div>
+                  <h2 class="text-xl sm:text-2xl font-heading font-extrabold text-[#0B132B] pt-1">
+                    Termination
+                  </h2>
+                  <div class="space-y-3.5 text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
+                    <p>Either party may terminate an engagement as described in the written agreement. If no project-specific termination process is included, either party may request termination in writing after discussing an orderly handover. Fees for completed work, committed third-party costs, access return, and transfer of paid deliverables will be handled under the accepted proposal and applicable law.</p>
+                  </div>
+                </section>
+
+                <!-- Section 18 -->
+                <section id="refund-and-cancellation-policy" class="scroll-mt-32 p-8 sm:p-10 rounded-3xl bg-white border border-slate-200/80 shadow-card-subtle space-y-4 hover:border-blue-400/40 transition-colors">
+                  <div class="flex items-center justify-between">
+                    <span class="text-xs font-mono font-bold uppercase tracking-wider text-blue-700 bg-blue-50 border border-blue-200/60 px-3 py-1 rounded-lg">
+                      SECTION 18
+                    </span>
+                    <a href="#refund-and-cancellation-policy" class="text-slate-300 hover:text-blue-600 text-xs transition-colors font-mono" title="Direct link">#</a>
+                  </div>
+                  <h2 class="text-xl sm:text-2xl font-heading font-extrabold text-[#0B132B] pt-1">
+                    Refund and cancellation policy
+                  </h2>
+                  <div class="space-y-3.5 text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
+                    <p>Project cancellation, refunds, deposits, and non-refundable third-party costs will be described in the written proposal or agreement. Placeholder: [Insert cancellation notice period, refund calculation, and treatment of work completed]. No refund promise is made by this general website notice beyond rights required by applicable law.</p>
+                  </div>
+                </section>
+
+                <!-- Section 19 -->
+                <section id="force-majeure" class="scroll-mt-32 p-8 sm:p-10 rounded-3xl bg-white border border-slate-200/80 shadow-card-subtle space-y-4 hover:border-blue-400/40 transition-colors">
+                  <div class="flex items-center justify-between">
+                    <span class="text-xs font-mono font-bold uppercase tracking-wider text-blue-700 bg-blue-50 border border-blue-200/60 px-3 py-1 rounded-lg">
+                      SECTION 19
+                    </span>
+                    <a href="#force-majeure" class="text-slate-300 hover:text-blue-600 text-xs transition-colors font-mono" title="Direct link">#</a>
+                  </div>
+                  <h2 class="text-xl sm:text-2xl font-heading font-extrabold text-[#0B132B] pt-1">
+                    Force majeure
+                  </h2>
+                  <div class="space-y-3.5 text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
+                    <p>Neither party is responsible for delay caused by events beyond reasonable control, such as natural disasters, public emergencies, infrastructure failures, labour disruption, or third-party platform outages. The affected party will notify the other and take reasonable steps to reduce the impact. If the event continues, the parties will discuss a fair adjustment or termination under the project agreement.</p>
+                  </div>
+                </section>
+
+                <!-- Section 20 -->
+                <section id="governing-law-and-jurisdiction" class="scroll-mt-32 p-8 sm:p-10 rounded-3xl bg-white border border-slate-200/80 shadow-card-subtle space-y-4 hover:border-blue-400/40 transition-colors">
+                  <div class="flex items-center justify-between">
+                    <span class="text-xs font-mono font-bold uppercase tracking-wider text-blue-700 bg-blue-50 border border-blue-200/60 px-3 py-1 rounded-lg">
+                      SECTION 20
+                    </span>
+                    <a href="#governing-law-and-jurisdiction" class="text-slate-300 hover:text-blue-600 text-xs transition-colors font-mono" title="Direct link">#</a>
+                  </div>
+                  <h2 class="text-xl sm:text-2xl font-heading font-extrabold text-[#0B132B] pt-1">
+                    Governing law and jurisdiction
+                  </h2>
+                  <div class="space-y-3.5 text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
+                    <p>These terms are governed by the laws of India. Subject to applicable consumer and other mandatory jurisdiction rules, courts at [City], [State], India will have jurisdiction over disputes arising from these terms.</p>
+                  </div>
+                </section>
+
+                <!-- Section 21 -->
+                <section id="dispute-resolution" class="scroll-mt-32 p-8 sm:p-10 rounded-3xl bg-white border border-slate-200/80 shadow-card-subtle space-y-4 hover:border-blue-400/40 transition-colors">
+                  <div class="flex items-center justify-between">
+                    <span class="text-xs font-mono font-bold uppercase tracking-wider text-blue-700 bg-blue-50 border border-blue-200/60 px-3 py-1 rounded-lg">
+                      SECTION 21
+                    </span>
+                    <a href="#dispute-resolution" class="text-slate-300 hover:text-blue-600 text-xs transition-colors font-mono" title="Direct link">#</a>
+                  </div>
+                  <h2 class="text-xl sm:text-2xl font-heading font-extrabold text-[#0B132B] pt-1">
+                    Dispute resolution
+                  </h2>
+                  <div class="space-y-3.5 text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
+                    <p>The parties will first attempt to resolve a dispute through good-faith discussion. If that does not resolve it, they may consider mediation or arbitration under a written process agreed between them and consistent with applicable Indian law. No arbitration procedure or seat is fixed by this general notice; project-specific terms may define it.</p>
+                  </div>
+                </section>
+
+                <!-- Section 22 -->
+                <section id="changes-to-these-terms" class="scroll-mt-32 p-8 sm:p-10 rounded-3xl bg-white border border-slate-200/80 shadow-card-subtle space-y-4 hover:border-blue-400/40 transition-colors">
+                  <div class="flex items-center justify-between">
+                    <span class="text-xs font-mono font-bold uppercase tracking-wider text-blue-700 bg-blue-50 border border-blue-200/60 px-3 py-1 rounded-lg">
+                      SECTION 22
+                    </span>
+                    <a href="#changes-to-these-terms" class="text-slate-300 hover:text-blue-600 text-xs transition-colors font-mono" title="Direct link">#</a>
+                  </div>
+                  <h2 class="text-xl sm:text-2xl font-heading font-extrabold text-[#0B132B] pt-1">
+                    Changes to these terms
+                  </h2>
+                  <div class="space-y-3.5 text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
+                    <p>We may update these Terms and Conditions from time to time. The updated version will appear on this page with its latest revision date. Continued use of the website after an update means the revised terms apply to website use; an existing project remains governed by its accepted agreement unless both parties agree to a change.</p>
+                  </div>
+                </section>
+
+                <!-- Section 23 -->
+                <section id="contact-information" class="scroll-mt-32 p-8 sm:p-10 rounded-3xl bg-white border border-slate-200/80 shadow-card-subtle space-y-4 hover:border-blue-400/40 transition-colors">
+                  <div class="flex items-center justify-between">
+                    <span class="text-xs font-mono font-bold uppercase tracking-wider text-blue-700 bg-blue-50 border border-blue-200/60 px-3 py-1 rounded-lg">
+                      SECTION 23
+                    </span>
+                    <a href="#contact-information" class="text-slate-300 hover:text-blue-600 text-xs transition-colors font-mono" title="Direct link">#</a>
+                  </div>
+                  <h2 class="text-xl sm:text-2xl font-heading font-extrabold text-[#0B132B] pt-1">
+                    Contact information
+                  </h2>
+                  <div class="space-y-3.5 text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
+                    <p>For questions about these terms or our services, contact RAR Consultant at dumbresanskar23@gmail.com or +91 91580 30333. Registered address: [Registered Address], [City], [State], India.</p>
+                  </div>
+                </section>
+              </div>
+
+              <!-- Back to top -->
+              <div class="pt-6 border-t border-slate-200 flex justify-end">
+                <a href="#top" class="inline-flex items-center gap-2 text-xs font-bold text-slate-700 hover:text-blue-600 px-4 py-2 rounded-xl bg-[#F8FAFC] border border-slate-200/80 transition-colors">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
+                  <span>Back to top</span>
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#070D1E] text-slate-300 pt-16 pb-12 border-t border-cyan-500/15 relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-white/10">
+          <div class="lg:col-span-4 space-y-5">
+            <a href="index.html" class="inline-block focus:outline-none focus:ring-2 focus:ring-accent rounded-xl">
+              <img src="logo.png" alt="RAR Consultant" class="h-11 w-auto object-contain" loading="lazy" />
+            </a>
+            <p class="text-slate-300 text-sm leading-relaxed pr-4 font-normal">
+              Practical digital services for ambitious small and local businesses across India. All IT Solutions Under One Roof.
+            </p>
+            <div class="space-y-3 pt-2">
+              <a href="tel:+919158030333" class="flex items-center gap-3 text-sm text-slate-200 hover:text-cyan-400 transition-colors group">
+                <span class="w-8 h-8 rounded-full bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center group-hover:border-cyan-400 group-hover:bg-cyan-500/20 transition-all">
+                  <svg class="w-3.5 h-3.5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                </span>
+                <span class="font-semibold">+91 91580 30333</span>
+              </a>
+              <a href="mailto:dumbresanskar23@gmail.com" class="flex items-center gap-3 text-sm text-slate-200 hover:text-cyan-400 transition-colors group">
+                <span class="w-8 h-8 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center group-hover:border-cyan-400 group-hover:bg-blue-500/20 transition-all">
+                  <svg class="w-3.5 h-3.5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                </span>
+                <span class="font-semibold">dumbresanskar23@gmail.com</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="lg:col-span-2 space-y-4">
+            <h2 class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400 font-heading font-extrabold text-xs tracking-widest uppercase">
+              Explore
+            </h2>
+            <ul class="space-y-2.5 text-sm">
+              <li><a href="index.html" class="text-slate-300 hover:text-white transition-colors font-medium">Home</a></li>
+              <li><a href="about.html" class="text-slate-300 hover:text-white transition-colors font-medium">About</a></li>
+              <li><a href="services.html" class="text-slate-300 hover:text-white transition-colors font-medium">Services</a></li>
+              <li><a href="contact.html" class="text-slate-300 hover:text-white transition-colors font-medium">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="lg:col-span-3 space-y-4">
+            <h2 class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400 font-heading font-extrabold text-xs tracking-widest uppercase">
+              Services
+            </h2>
+            <ul class="space-y-2.5 text-sm">
+              <li><a href="contact.html?service=website-development" class="text-slate-300 hover:text-white transition-colors flex items-center justify-between group font-medium"><span>Website Development</span><svg class="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg></a></li>
+              <li><a href="contact.html?service=custom-software-development" class="text-slate-300 hover:text-white transition-colors flex items-center justify-between group font-medium"><span>Custom Software Development</span><svg class="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg></a></li>
+              <li><a href="contact.html?service=search-engine-optimization" class="text-slate-300 hover:text-white transition-colors flex items-center justify-between group font-medium"><span>Search Engine Optimization (SEO)</span><svg class="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg></a></li>
+              <li><a href="contact.html?service=e-commerce-platform-portal" class="text-slate-300 hover:text-white transition-colors flex items-center justify-between group font-medium"><span>E-Commerce Platform / Portal</span><svg class="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg></a></li>
+              <li><a href="contact.html?service=local-business-digital-setup" class="text-slate-300 hover:text-white transition-colors flex items-center justify-between group font-medium"><span>Local Business Digital Setup</span><svg class="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg></a></li>
+              <li><a href="contact.html?service=website-maintenance" class="text-slate-300 hover:text-white transition-colors flex items-center justify-between group font-medium"><span>Website Maintenance</span><svg class="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg></a></li>
+            </ul>
+          </div>
+
+          <div class="lg:col-span-3 space-y-4">
+            <h2 class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400 font-heading font-extrabold text-xs tracking-widest uppercase">
+              Legal & Privacy
+            </h2>
+            <ul class="space-y-2.5 text-sm">
+              <li><a href="privacy-policy.html" class="text-slate-300 hover:text-white transition-colors font-medium">Privacy Policy</a></li>
+              <li><a href="terms-and-conditions.html" class="text-slate-300 hover:text-white transition-colors font-medium">Terms and Conditions</a></li>
+              <li>
+                <button type="button" class="open-cookie-settings text-slate-300 hover:text-cyan-400 transition-colors flex items-center gap-2 text-left font-medium">
+                  <svg class="w-3.5 h-3.5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/></svg>
+                  <span>Cookie Settings</span>
+                </button>
+              </li>
+            </ul>
+
+            <div class="mt-6 p-4 rounded-2xl bg-white/[0.04] border border-cyan-500/20 text-xs text-slate-300 space-y-1">
+              <div class="flex items-center gap-2 text-cyan-400 font-bold">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                <span>DPDP Act Compliant</span>
+              </div>
+              <p class="leading-relaxed text-slate-400">
+                Respecting your digital personal data protection rights under Indian law.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+          <p>© 2026 RAR Consultant. All rights reserved.</p>
+          <p class="flex items-center gap-2 text-center sm:text-right">
+            <span>Compliant with India's Digital Personal Data Protection Act, 2023.</span>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating Quick Actions -->
+    <div class="fixed bottom-6 right-6 z-40 flex flex-col items-center gap-3.5" aria-label="Quick contact options">
+      <a href="https://wa.me/919158030333?text=Hello%20RAR%20Consultant%2C%20I%20would%20like%20to%20enquire%20about%20your%20services." target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" title="Chat on WhatsApp" class="group relative w-13 h-13 p-3.5 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-xl shadow-emerald-500/35 hover:scale-110 active:scale-95 transition-all duration-200 border border-white/20">
+        <span class="absolute -inset-1 rounded-full bg-[#25D366]/40 animate-ping opacity-60 pointer-events-none"></span>
+        <svg class="w-6 h-6 fill-current relative z-10" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+        <span class="absolute right-16 bg-[#070D1E] text-white text-xs font-bold px-3 py-1.5 rounded-xl shadow-xl opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity whitespace-nowrap border border-white/10">WhatsApp Us</span>
+      </a>
+
+      <a href="tel:+919158030333" aria-label="Call +91 91580 30333" title="Call +91 91580 30333" class="group relative w-13 h-13 p-3.5 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 text-white flex items-center justify-center shadow-xl shadow-blue-500/35 hover:scale-110 active:scale-95 transition-all duration-200 border border-white/20">
+        <svg class="w-5 h-5 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+        <span class="absolute right-16 bg-[#070D1E] text-white text-xs font-bold px-3 py-1.5 rounded-xl shadow-xl opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity whitespace-nowrap border border-white/10">+91 91580 30333</span>
+      </a>
+    </div>
+
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" role="region" aria-label="Cookie preferences" class="hidden fixed bottom-4 left-4 right-4 sm:left-auto sm:right-6 sm:max-w-md md:max-w-lg z-50">
+      <div class="bg-[#070D1E]/95 text-white backdrop-blur-2xl p-6 rounded-3xl shadow-2xl border border-cyan-500/20">
+        <div class="flex items-start justify-between gap-4 mb-4">
+          <div class="flex items-center gap-3">
+            <span class="w-10 h-10 rounded-2xl bg-cyan-500/15 border border-cyan-400/30 flex items-center justify-center text-cyan-300 shadow-sm">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2a10 10 0 1010 10A10 10 0 0012 2zm-3.5 6.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm7 7a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm-3.5-3.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/></svg>
+            </span>
+            <h2 id="cookie-banner-title" class="font-heading font-extrabold text-base sm:text-lg text-white">Your privacy matters</h2>
+          </div>
+          <button id="cookie-close" type="button" class="text-slate-400 hover:text-white p-1 rounded-lg transition-colors" aria-label="Close cookie banner">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
+        </div>
+
+        <div id="cookie-simple-view">
+          <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-6 font-normal">
+            Essential storage keeps this site working. Optional preferences and analytics stay off unless you choose them. You can change your choice anytime in Cookie Settings. Read our <a href="privacy-policy.html" class="text-cyan-400 font-semibold underline hover:text-cyan-300 transition-colors">Privacy Policy</a>.
+          </p>
+          <div class="flex flex-wrap items-center gap-2.5 pt-1">
+            <button id="cookie-reject" type="button" class="px-3.5 py-2.5 text-xs font-semibold rounded-2xl bg-white/10 hover:bg-white/15 text-slate-200 transition-colors">Reject Non-Essential</button>
+            <button id="cookie-manage" type="button" class="px-3.5 py-2.5 text-xs font-semibold rounded-2xl bg-white/10 hover:bg-white/15 text-slate-200 transition-colors">Manage Preferences</button>
+            <button id="cookie-accept-all" type="button" class="flex-1 sm:flex-none px-5 py-2.5 text-xs font-bold rounded-2xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white hover:opacity-95 shadow-md shadow-blue-600/30 transition-all">Accept All</button>
+          </div>
+        </div>
+
+        <div id="cookie-manage-view" class="hidden">
+          <div class="space-y-3 mb-6">
+            <div class="flex items-start justify-between gap-3 p-3.5 rounded-2xl bg-white/[0.04] border border-white/10">
+              <div>
+                <strong class="block text-sm font-bold text-white">Essential</strong>
+                <small class="text-xs text-slate-300">Needed for basic site features; always on.</small>
+              </div>
+              <input type="checkbox" checked disabled class="mt-1 h-4 w-4 rounded accent-blue-600 cursor-not-allowed opacity-75" aria-label="Essential cookies always active" />
+            </div>
+            <label class="flex items-start justify-between gap-3 p-3.5 rounded-2xl bg-white/[0.04] border border-white/10 hover:border-cyan-500/40 cursor-pointer transition-colors">
+              <div>
+                <strong class="block text-sm font-bold text-white">Preferences</strong>
+                <small class="text-xs text-slate-300">Remember optional interface choices.</small>
+              </div>
+              <input id="cookie-pref-checkbox" type="checkbox" class="mt-1 h-4 w-4 rounded accent-blue-600 cursor-pointer" />
+            </label>
+            <label class="flex items-start justify-between gap-3 p-3.5 rounded-2xl bg-white/[0.04] border border-white/10 hover:border-cyan-500/40 cursor-pointer transition-colors">
+              <div>
+                <strong class="block text-sm font-bold text-white">Analytics</strong>
+                <small class="text-xs text-slate-300">No analytics are active by default.</small>
+              </div>
+              <input id="cookie-analytics-checkbox" type="checkbox" class="mt-1 h-4 w-4 rounded accent-blue-600 cursor-pointer" />
+            </label>
+          </div>
+          <div class="flex flex-wrap items-center gap-2.5 pt-1">
+            <button onclick="document.getElementById('cookie-reject').click()" type="button" class="flex-1 px-4 py-2.5 text-xs font-bold rounded-2xl bg-white/10 hover:bg-white/15 text-slate-200 transition-colors">Reject non-essential</button>
+            <button id="cookie-save-prefs" type="button" class="flex-1 px-4 py-2.5 text-xs font-bold rounded-2xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white hover:opacity-95 shadow-md shadow-blue-500/25 transition-opacity">Save preferences</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCRIPT -->
+    <script src="js/main.js"></script>
+  </body>
+</html>

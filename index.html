@@ -5,15 +5,924 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RAR Consultant — Smart IT Solutions for Growing Businesses</title>
     <meta name="description" content="Websites, custom software, SEO, e-commerce, local digital setup, and maintenance from RAR Consultant in India. All IT solutions under one roof." />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-    <meta name="theme-color" content="#101B35" />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body class="bg-white text-mainText font-sans antialiased selection:bg-secondary selection:text-white">
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-[#070D1E] py-4 sm:py-5 border-b border-white/5">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between">
+          <!-- Logo & Brand -->
+          <a href="index.html" class="flex items-center gap-3.5 group focus:outline-none focus:ring-2 focus:ring-accent rounded-xl p-1" aria-label="RAR Consultant home">
+            <div class="relative">
+              <div class="absolute -inset-1 rounded-xl bg-gradient-to-r from-blue-500 to-cyan-400 opacity-20 blur-sm group-hover:opacity-40 transition-opacity"></div>
+              <img src="logo.png" alt="RAR Consultant" class="relative h-10 w-auto object-contain transition-transform duration-200 group-hover:scale-105" />
+            </div>
+            <div class="hidden sm:block text-left">
+              <span class="block text-white font-heading font-extrabold text-lg tracking-tight leading-none group-hover:text-cyan-300 transition-colors">
+                RAR CONSULTANT
+              </span>
+              <span class="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400 text-[11px] font-bold tracking-widest uppercase mt-1">
+                Smart IT Solutions
+              </span>
+            </div>
+          </a>
+
+          <!-- Desktop Navigation Links -->
+          <nav class="hidden md:flex items-center gap-1.5 p-1 rounded-full bg-white/[0.04] border border-white/10 backdrop-blur-md">
+            <a href="index.html" class="nav-desktop-link relative px-4 py-2 rounded-full text-sm font-semibold text-slate-300 hover:text-white hover:bg-white/5 transition-all duration-200">Home</a>
+            <a href="about.html" class="nav-desktop-link relative px-4 py-2 rounded-full text-sm font-semibold text-slate-300 hover:text-white hover:bg-white/5 transition-all duration-200">About</a>
+            <a href="services.html" class="nav-desktop-link relative px-4 py-2 rounded-full text-sm font-semibold text-slate-300 hover:text-white hover:bg-white/5 transition-all duration-200">Services</a>
+            <a href="contact.html" class="nav-desktop-link relative px-4 py-2 rounded-full text-sm font-semibold text-slate-300 hover:text-white hover:bg-white/5 transition-all duration-200">Contact</a>
+          </nav>
+
+          <!-- Right Action Buttons -->
+          <div class="hidden md:flex items-center gap-4">
+            <a href="tel:+919158030333" class="flex items-center gap-2.5 text-xs font-semibold text-slate-300 hover:text-cyan-400 transition-colors py-2 px-3 rounded-full hover:bg-white/5" title="Call us directly">
+              <span class="w-8 h-8 rounded-full bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              </span>
+              <span class="hidden xl:inline">+91 91580 30333</span>
+            </a>
+
+            <a href="contact.html" class="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 hover:from-blue-500 hover:via-indigo-500 hover:to-cyan-400 text-white text-sm font-bold px-5 py-2.5 rounded-full shadow-lg shadow-blue-600/30 border border-white/20 transition-all duration-200 hover:shadow-cyan-500/25 hover:-translate-y-0.5 active:translate-y-0">
+              <span>Get a Free Quote</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <div class="flex md:hidden items-center gap-2.5">
+            <a href="contact.html" class="text-xs bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold px-3.5 py-1.5 rounded-full shadow-sm">
+              Quote
+            </a>
+            <button id="mobile-menu-btn" type="button" class="p-2 rounded-xl text-slate-300 hover:text-white bg-white/5 border border-white/10 focus:outline-none focus:ring-2 focus:ring-accent" aria-label="Toggle navigation menu" aria-expanded="false">
+              <svg id="menu-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+              <svg id="close-icon" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Drawer -->
+      <div id="mobile-menu-drawer" class="hidden md:hidden bg-[#070D1E]/98 border-t border-cyan-500/15 backdrop-blur-2xl px-5 pt-4 pb-6 space-y-4 shadow-2xl">
+        <nav class="flex flex-col space-y-1.5">
+          <a href="index.html" class="px-4 py-3 rounded-2xl text-base font-semibold flex items-center justify-between text-slate-200 hover:bg-white/5 hover:text-white transition-all">
+            <span>Home</span>
+            <svg class="w-4 h-4 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </a>
+          <a href="about.html" class="px-4 py-3 rounded-2xl text-base font-semibold flex items-center justify-between text-slate-200 hover:bg-white/5 hover:text-white transition-all">
+            <span>About</span>
+            <svg class="w-4 h-4 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </a>
+          <a href="services.html" class="px-4 py-3 rounded-2xl text-base font-semibold flex items-center justify-between text-slate-200 hover:bg-white/5 hover:text-white transition-all">
+            <span>Services</span>
+            <svg class="w-4 h-4 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </a>
+          <a href="contact.html" class="px-4 py-3 rounded-2xl text-base font-semibold flex items-center justify-between text-slate-200 hover:bg-white/5 hover:text-white transition-all">
+            <span>Contact</span>
+            <svg class="w-4 h-4 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </a>
+        </nav>
+        <div class="pt-3 border-t border-white/10 space-y-3">
+          <a href="tel:+919158030333" class="flex items-center gap-3 px-4 py-3 text-sm text-slate-300 hover:text-cyan-400 rounded-2xl bg-white/5 border border-white/5">
+            <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            <span class="font-semibold">+91 91580 30333</span>
+          </a>
+          <a href="contact.html" class="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 text-white font-bold py-3.5 rounded-2xl shadow-lg shadow-blue-500/30">
+            <span>Get a Free Quote</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="overflow-hidden">
+      <!-- 1. HERO SECTION -->
+      <section class="relative min-h-[92vh] flex items-center pt-28 pb-20 bg-gradient-to-b from-[#070D1E] via-[#0C1A3A] to-[#081026] text-white">
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[750px] h-[520px] bg-blue-600/20 rounded-full blur-[140px] pointer-events-none"></div>
+        <div class="absolute top-1/3 right-10 w-[480px] h-[480px] bg-cyan-400/15 rounded-full blur-[130px] pointer-events-none"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:32px_32px] opacity-40 pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+            <!-- Left Hero Content -->
+            <div class="lg:col-span-7 space-y-6">
+              <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-cyan-950/50 border border-cyan-400/30 text-xs font-extrabold tracking-wider uppercase text-cyan-300 shadow-[0_0_20px_rgba(6,182,212,0.18)]">
+                <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
+                <span>ALL IT SOLUTIONS UNDER ONE ROOF</span>
+              </div>
+
+              <h1 class="text-3xl sm:text-5xl lg:text-6xl font-heading font-extrabold tracking-tight text-white leading-[1.12]">
+                Powering Your Business With <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-300 to-blue-400">Smart IT Solutions</span>
+              </h1>
+
+              <p class="text-base sm:text-lg text-slate-300 max-w-2xl leading-relaxed">
+                From websites and custom software to search visibility and ongoing support, get one practical partner for your digital growth.
+              </p>
+
+              <div class="flex flex-wrap items-center gap-4 pt-2">
+                <a href="services.html" class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/15 text-white font-semibold text-sm sm:text-base px-6 py-3.5 rounded-full border border-white/20 backdrop-blur-md transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0">
+                  <span>Explore Services</span>
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </a>
+
+                <a href="contact.html" class="inline-flex items-center gap-2.5 bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 hover:from-blue-500 hover:via-indigo-500 hover:to-cyan-400 text-white font-bold text-sm sm:text-base px-7 py-3.5 rounded-full shadow-lg shadow-blue-600/35 border border-white/20 transition-all duration-200 hover:shadow-cyan-500/30 hover:-translate-y-0.5 active:translate-y-0">
+                  <span>Get a Free Quote</span>
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </a>
+              </div>
+
+              <div class="pt-3 flex items-center gap-3 text-xs text-slate-300 font-medium">
+                <span class="w-8 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500"></span>
+                <span>Built for small and local businesses across India</span>
+              </div>
+            </div>
+
+            <!-- Right Hero Visual Card -->
+            <div class="lg:col-span-5 flex justify-center">
+              <div class="w-full max-w-md relative">
+                <div class="absolute -inset-1 rounded-3xl bg-gradient-to-r from-blue-600 to-cyan-400 opacity-20 blur-xl pointer-events-none"></div>
+
+                <div class="relative rounded-3xl p-6 sm:p-8 bg-gradient-to-b from-[#0F1E3D]/90 to-[#070E22]/95 border border-cyan-500/20 backdrop-blur-2xl shadow-2xl">
+                  <div class="flex items-center justify-between pb-6 border-b border-white/10 text-xs text-slate-400 font-mono">
+                    <span class="flex items-center gap-2 text-cyan-300 font-semibold">
+                      <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+                      DIGITAL SYSTEMS / RAR.01
+                    </span>
+                    <span class="text-slate-400">18° 31’ 12.0” N</span>
+                  </div>
+
+                  <div class="py-7 space-y-4">
+                    <div class="p-4 rounded-2xl bg-white/[0.04] border border-white/10 flex items-center gap-4 hover:border-cyan-500/40 transition-colors">
+                      <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center text-white shrink-0 shadow-md shadow-blue-500/30">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/></svg>
+                      </div>
+                      <div>
+                        <h2 class="text-sm font-bold text-white">Full-Stack Development</h2>
+                        <p class="text-xs text-slate-400">Websites & Custom Applications</p>
+                      </div>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-white/[0.04] border border-white/10 flex items-center gap-4 hover:border-cyan-500/40 transition-colors">
+                      <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500 to-teal-400 flex items-center justify-center text-white shrink-0 shadow-md shadow-cyan-500/30">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                      </div>
+                      <div>
+                        <h2 class="text-sm font-bold text-white">Search Engine Growth</h2>
+                        <p class="text-xs text-slate-400">SEO & Google Local Business</p>
+                      </div>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-white/[0.04] border border-white/10 flex items-center gap-4 hover:border-cyan-500/40 transition-colors">
+                      <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-600 to-blue-600 flex items-center justify-center text-white shrink-0 shadow-md shadow-indigo-500/30">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                      </div>
+                      <div>
+                        <h2 class="text-sm font-bold text-white">24/7 Digital Support</h2>
+                        <p class="text-xs text-slate-400">Ongoing Care & Maintenance</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="pt-4 border-t border-white/10 flex items-center justify-between text-xs text-slate-300">
+                    <span class="flex items-center gap-1.5">
+                      <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                      <span>Performance: 99.8%</span>
+                    </span>
+                    <span class="text-cyan-400 font-bold">Reliable Architecture</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-14 pt-8 text-center">
+            <a href="#home-proof" class="inline-flex items-center gap-2 text-xs font-semibold text-slate-400 hover:text-cyan-300 transition-colors">
+              <svg class="w-3.5 h-3.5 animate-bounce text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+              <span>Scroll to explore</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. TRUST & METRICS SECTION -->
+      <section id="home-proof" class="py-20 bg-[#F8FAFC] relative border-b border-slate-200/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-3xl mx-auto mb-14">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold tracking-wider uppercase bg-blue-50 text-blue-700 border border-blue-200/80 shadow-sm mb-3">
+              <span class="w-1.5 h-1.5 rounded-full bg-cyan-500"></span>
+              <span>A STRONGER DIGITAL FOUNDATION</span>
+            </div>
+            <p class="text-xl sm:text-2xl font-heading font-extrabold text-[#0B132B]">
+              Clear solutions. Thoughtful delivery. Support that stays close.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-white p-7 sm:p-8 rounded-3xl shadow-card-subtle border border-slate-200/80 text-center hover:border-blue-400/60 hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1 relative overflow-hidden group">
+              <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <div class="text-3xl sm:text-4xl lg:text-5xl font-heading font-black tracking-tight mb-2">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">120</span><span class="text-cyan-500 font-extrabold">+</span>
+              </div>
+              <div class="text-xs sm:text-sm font-bold text-slate-600 uppercase tracking-wide">Projects Delivered</div>
+            </div>
+
+            <div class="bg-white p-7 sm:p-8 rounded-3xl shadow-card-subtle border border-slate-200/80 text-center hover:border-blue-400/60 hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1 relative overflow-hidden group">
+              <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <div class="text-3xl sm:text-4xl lg:text-5xl font-heading font-black tracking-tight mb-2">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">80</span><span class="text-cyan-500 font-extrabold">+</span>
+              </div>
+              <div class="text-xs sm:text-sm font-bold text-slate-600 uppercase tracking-wide">Happy Clients</div>
+            </div>
+
+            <div class="bg-white p-7 sm:p-8 rounded-3xl shadow-card-subtle border border-slate-200/80 text-center hover:border-blue-400/60 hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1 relative overflow-hidden group">
+              <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <div class="text-3xl sm:text-4xl lg:text-5xl font-heading font-black tracking-tight mb-2">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">5</span><span class="text-cyan-500 font-extrabold">+</span>
+              </div>
+              <div class="text-xs sm:text-sm font-bold text-slate-600 uppercase tracking-wide">Years of Experience</div>
+            </div>
+
+            <div class="bg-white p-7 sm:p-8 rounded-3xl shadow-card-subtle border border-slate-200/80 text-center hover:border-blue-400/60 hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1 relative overflow-hidden group">
+              <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <div class="text-3xl sm:text-4xl lg:text-5xl font-heading font-black tracking-tight mb-2">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">24</span><span class="text-cyan-500 font-extrabold">/7</span>
+              </div>
+              <div class="text-xs sm:text-sm font-bold text-slate-600 uppercase tracking-wide">Support Availability</div>
+            </div>
+          </div>
+
+          <p class="text-center text-xs text-slate-500 mt-8 italic">
+            Illustrative placeholder figures — replace with verified business metrics before launch.
+          </p>
+        </div>
+      </section>
+
+      <!-- 3. WHAT WE DO — SERVICES PREVIEW -->
+      <section class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+            <div class="max-w-2xl">
+              <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold tracking-wider uppercase bg-blue-50 text-blue-700 border border-blue-200/80 shadow-sm mb-3">
+                <span class="w-1.5 h-1.5 rounded-full bg-cyan-500"></span>
+                <span>WHAT WE DO</span>
+              </div>
+              <h2 class="text-2xl sm:text-4xl font-heading font-extrabold text-[#0B132B]">
+                The right digital help, in <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500">one place.</span>
+              </h2>
+              <p class="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
+                Choose focused support for the next stage of your business—or bring several needs together with one partner.
+              </p>
+            </div>
+
+            <a href="services.html" class="inline-flex items-center gap-2 text-blue-600 font-bold text-sm hover:text-cyan-600 group transition-colors">
+              <span>View all services</span>
+              <svg class="w-4 h-4 group-hover:translate-x-1.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- 1. Website Development -->
+            <div class="group bg-white rounded-3xl p-8 border border-slate-200/80 shadow-card-subtle hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between relative overflow-hidden hover:border-cyan-400/50">
+              <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <div>
+                <div class="flex items-center justify-between mb-6">
+                  <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-600 to-cyan-500 text-white flex items-center justify-center shadow-md shadow-blue-500/20 group-hover:scale-110 transition-transform duration-300">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/></svg>
+                  </div>
+                  <span class="font-heading font-bold text-xs text-slate-400">01</span>
+                </div>
+                <h3 class="text-xl font-heading font-extrabold text-[#0B132B] mb-3 group-hover:text-blue-600 transition-colors">Website Development</h3>
+                <p class="text-sm text-slate-600 leading-relaxed mb-6 font-normal">Fast, accessible websites that turn a first visit into a confident next step.</p>
+                <ul class="space-y-2.5 mb-6">
+                  <li class="flex items-center gap-2.5 text-xs text-slate-700"><svg class="w-4 h-4 text-cyan-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span class="line-clamp-1 font-medium">Responsive business websites</span></li>
+                  <li class="flex items-center gap-2.5 text-xs text-slate-700"><svg class="w-4 h-4 text-cyan-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span class="line-clamp-1 font-medium">Landing pages and portfolios</span></li>
+                  <li class="flex items-center gap-2.5 text-xs text-slate-700"><svg class="w-4 h-4 text-cyan-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span class="line-clamp-1 font-medium">CMS integration</span></li>
+                </ul>
+              </div>
+              <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                <a href="contact.html?service=website-development" class="text-xs font-bold text-blue-600 hover:text-cyan-600 flex items-center gap-1 group-hover:gap-2 transition-all">
+                  <span>Get a Quote</span>
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </a>
+                <span class="text-[11px] text-slate-400 font-semibold uppercase tracking-wider">Custom Scope</span>
+              </div>
+            </div>
+
+            <!-- 2. Custom Software Development -->
+            <div class="group bg-white rounded-3xl p-8 border border-slate-200/80 shadow-card-subtle hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between relative overflow-hidden hover:border-indigo-400/50">
+              <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <div>
+                <div class="flex items-center justify-between mb-6">
+                  <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-indigo-600 to-blue-500 text-white flex items-center justify-center shadow-md shadow-indigo-500/20 group-hover:scale-110 transition-transform duration-300">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                  </div>
+                  <span class="font-heading font-bold text-xs text-slate-400">02</span>
+                </div>
+                <h3 class="text-xl font-heading font-extrabold text-[#0B132B] mb-3 group-hover:text-blue-600 transition-colors">Custom Software Development</h3>
+                <p class="text-sm text-slate-600 leading-relaxed mb-6 font-normal">Purpose-built tools that make complex day-to-day work simpler.</p>
+                <ul class="space-y-2.5 mb-6">
+                  <li class="flex items-center gap-2.5 text-xs text-slate-700"><svg class="w-4 h-4 text-cyan-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span class="line-clamp-1 font-medium">Web apps and dashboards</span></li>
+                  <li class="flex items-center gap-2.5 text-xs text-slate-700"><svg class="w-4 h-4 text-cyan-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span class="line-clamp-1 font-medium">Admin panels and automation tools</span></li>
+                  <li class="flex items-center gap-2.5 text-xs text-slate-700"><svg class="w-4 h-4 text-cyan-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span class="line-clamp-1 font-medium">API integration</span></li>
+                </ul>
+              </div>
+              <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                <a href="contact.html?service=custom-software-development" class="text-xs font-bold text-blue-600 hover:text-cyan-600 flex items-center gap-1 group-hover:gap-2 transition-all">
+                  <span>Get a Quote</span>
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </a>
+                <span class="text-[11px] text-slate-400 font-semibold uppercase tracking-wider">Custom Scope</span>
+              </div>
+            </div>
+
+            <!-- 3. Search Engine Optimization (SEO) -->
+            <div class="group bg-white rounded-3xl p-8 border border-slate-200/80 shadow-card-subtle hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between relative overflow-hidden hover:border-teal-400/50">
+              <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <div>
+                <div class="flex items-center justify-between mb-6">
+                  <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan-600 to-teal-500 text-white flex items-center justify-center shadow-md shadow-teal-500/20 group-hover:scale-110 transition-transform duration-300">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                  </div>
+                  <span class="font-heading font-bold text-xs text-slate-400">03</span>
+                </div>
+                <h3 class="text-xl font-heading font-extrabold text-[#0B132B] mb-3 group-hover:text-blue-600 transition-colors">Search Engine Optimization (SEO)</h3>
+                <p class="text-sm text-slate-600 leading-relaxed mb-6 font-normal">A practical search foundation that helps the right customers discover you.</p>
+                <ul class="space-y-2.5 mb-6">
+                  <li class="flex items-center gap-2.5 text-xs text-slate-700"><svg class="w-4 h-4 text-cyan-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span class="line-clamp-1 font-medium">On-page and technical SEO</span></li>
+                  <li class="flex items-center gap-2.5 text-xs text-slate-700"><svg class="w-4 h-4 text-cyan-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span class="line-clamp-1 font-medium">Keyword research</span></li>
+                  <li class="flex items-center gap-2.5 text-xs text-slate-700"><svg class="w-4 h-4 text-cyan-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span class="line-clamp-1 font-medium">Google Business Profile guidance</span></li>
+                </ul>
+              </div>
+              <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                <a href="contact.html?service=search-engine-optimization" class="text-xs font-bold text-blue-600 hover:text-cyan-600 flex items-center gap-1 group-hover:gap-2 transition-all">
+                  <span>Get a Quote</span>
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </a>
+                <span class="text-[11px] text-slate-400 font-semibold uppercase tracking-wider">Custom Scope</span>
+              </div>
+            </div>
+
+            <!-- 4. E-Commerce Platform / Portal -->
+            <div class="group bg-white rounded-3xl p-8 border border-slate-200/80 shadow-card-subtle hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between relative overflow-hidden hover:border-blue-400/50">
+              <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <div>
+                <div class="flex items-center justify-between mb-6">
+                  <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-700 to-indigo-600 text-white flex items-center justify-center shadow-md shadow-blue-500/20 group-hover:scale-110 transition-transform duration-300">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+                  </div>
+                  <span class="font-heading font-bold text-xs text-slate-400">04</span>
+                </div>
+                <h3 class="text-xl font-heading font-extrabold text-[#0B132B] mb-3 group-hover:text-blue-600 transition-colors">E-Commerce Platform / Portal</h3>
+                <p class="text-sm text-slate-600 leading-relaxed mb-6 font-normal">A simpler path from product discovery to a well-managed order.</p>
+                <ul class="space-y-2.5 mb-6">
+                  <li class="flex items-center gap-2.5 text-xs text-slate-700"><svg class="w-4 h-4 text-cyan-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span class="line-clamp-1 font-medium">Online stores and product catalogs</span></li>
+                  <li class="flex items-center gap-2.5 text-xs text-slate-700"><svg class="w-4 h-4 text-cyan-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span class="line-clamp-1 font-medium">Indian payment gateway integration</span></li>
+                  <li class="flex items-center gap-2.5 text-xs text-slate-700"><svg class="w-4 h-4 text-cyan-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span class="line-clamp-1 font-medium">Order management</span></li>
+                </ul>
+              </div>
+              <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                <a href="contact.html?service=e-commerce-platform-portal" class="text-xs font-bold text-blue-600 hover:text-cyan-600 flex items-center gap-1 group-hover:gap-2 transition-all">
+                  <span>Get a Quote</span>
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </a>
+                <span class="text-[11px] text-slate-400 font-semibold uppercase tracking-wider">Custom Scope</span>
+              </div>
+            </div>
+
+            <!-- 5. Local Business Digital Setup -->
+            <div class="group bg-white rounded-3xl p-8 border border-slate-200/80 shadow-card-subtle hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between relative overflow-hidden hover:border-sky-400/50">
+              <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <div>
+                <div class="flex items-center justify-between mb-6">
+                  <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-sky-600 to-cyan-500 text-white flex items-center justify-center shadow-md shadow-sky-500/20 group-hover:scale-110 transition-transform duration-300">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                  </div>
+                  <span class="font-heading font-bold text-xs text-slate-400">05</span>
+                </div>
+                <h3 class="text-xl font-heading font-extrabold text-[#0B132B] mb-3 group-hover:text-blue-600 transition-colors">Local Business Digital Setup</h3>
+                <p class="text-sm text-slate-600 leading-relaxed mb-6 font-normal">The essential digital foundations that make a local business easier to find and contact.</p>
+                <ul class="space-y-2.5 mb-6">
+                  <li class="flex items-center gap-2.5 text-xs text-slate-700"><svg class="w-4 h-4 text-cyan-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span class="line-clamp-1 font-medium">Domain and hosting setup</span></li>
+                  <li class="flex items-center gap-2.5 text-xs text-slate-700"><svg class="w-4 h-4 text-cyan-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span class="line-clamp-1 font-medium">Business email</span></li>
+                  <li class="flex items-center gap-2.5 text-xs text-slate-700"><svg class="w-4 h-4 text-cyan-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span class="line-clamp-1 font-medium">Google Maps listing</span></li>
+                </ul>
+              </div>
+              <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                <a href="contact.html?service=local-business-digital-setup" class="text-xs font-bold text-blue-600 hover:text-cyan-600 flex items-center gap-1 group-hover:gap-2 transition-all">
+                  <span>Get a Quote</span>
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </a>
+                <span class="text-[11px] text-slate-400 font-semibold uppercase tracking-wider">Custom Scope</span>
+              </div>
+            </div>
+
+            <!-- 6. Website Maintenance -->
+            <div class="group bg-white rounded-3xl p-8 border border-slate-200/80 shadow-card-subtle hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between relative overflow-hidden hover:border-blue-400/50">
+              <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <div>
+                <div class="flex items-center justify-between mb-6">
+                  <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-slate-800 to-blue-900 text-white flex items-center justify-center shadow-md shadow-blue-900/20 group-hover:scale-110 transition-transform duration-300">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                  </div>
+                  <span class="font-heading font-bold text-xs text-slate-400">06</span>
+                </div>
+                <h3 class="text-xl font-heading font-extrabold text-[#0B132B] mb-3 group-hover:text-blue-600 transition-colors">Website Maintenance</h3>
+                <p class="text-sm text-slate-600 leading-relaxed mb-6 font-normal">Steady care that keeps your site updated, safer, and running smoothly.</p>
+                <ul class="space-y-2.5 mb-6">
+                  <li class="flex items-center gap-2.5 text-xs text-slate-700"><svg class="w-4 h-4 text-cyan-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span class="line-clamp-1 font-medium">Software and content updates</span></li>
+                  <li class="flex items-center gap-2.5 text-xs text-slate-700"><svg class="w-4 h-4 text-cyan-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span class="line-clamp-1 font-medium">Backups and security monitoring</span></li>
+                  <li class="flex items-center gap-2.5 text-xs text-slate-700"><svg class="w-4 h-4 text-cyan-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span class="line-clamp-1 font-medium">Performance tuning</span></li>
+                </ul>
+              </div>
+              <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                <a href="contact.html?service=website-maintenance" class="text-xs font-bold text-blue-600 hover:text-cyan-600 flex items-center gap-1 group-hover:gap-2 transition-all">
+                  <span>Get a Quote</span>
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </a>
+                <span class="text-[11px] text-slate-400 font-semibold uppercase tracking-wider">Custom Scope</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. WHY RAR CONSULTANT -->
+      <section class="py-24 bg-[#F8FAFC] relative overflow-hidden border-y border-slate-200/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+            <div class="lg:col-span-5 lg:sticky lg:top-28 space-y-6">
+              <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold tracking-wider uppercase bg-blue-50 text-blue-700 border border-blue-200/80 shadow-sm">
+                <span class="w-1.5 h-1.5 rounded-full bg-cyan-500"></span>
+                <span>WHY RAR CONSULTANT</span>
+              </div>
+
+              <h2 class="text-3xl sm:text-4xl font-heading font-extrabold text-[#0B132B] leading-tight">
+                Technology should move <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">your business forward.</span>
+              </h2>
+
+              <p class="text-base text-slate-600 leading-relaxed font-normal">
+                We keep the process understandable and the work connected to real business needs—without making digital transformation feel out of reach.
+              </p>
+
+              <div class="pt-2">
+                <a href="about.html" class="inline-flex items-center gap-2 bg-[#0B132B] hover:bg-slate-900 text-white text-sm font-bold px-6 py-3.5 rounded-full transition-all shadow-md hover:shadow-lg">
+                  <span>Get to know us</span>
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </a>
+              </div>
+            </div>
+
+            <div class="lg:col-span-7 space-y-4">
+              <!-- Benefit 1 -->
+              <div class="bg-white rounded-3xl p-6 sm:p-7 border border-slate-200/80 shadow-sm hover:shadow-md hover:border-blue-400/50 transition-all flex items-start gap-5 group">
+                <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-50 to-cyan-50 text-blue-600 group-hover:from-blue-600 group-hover:to-cyan-500 group-hover:text-white transition-all duration-300 flex items-center justify-center shrink-0 border border-blue-100">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+                </div>
+                <div class="flex-1">
+                  <div class="flex items-center justify-between mb-1.5">
+                    <h3 class="font-heading font-extrabold text-base sm:text-lg text-[#0B132B] group-hover:text-blue-600 transition-colors">Affordable by design</h3>
+                    <span class="text-xs font-mono font-bold text-slate-300 group-hover:text-cyan-500 transition-colors">01</span>
+                  </div>
+                  <p class="text-sm text-slate-600 leading-relaxed font-normal">Practical scope and clear proposals help you invest in what matters first.</p>
+                </div>
+              </div>
+
+              <!-- Benefit 2 -->
+              <div class="bg-white rounded-3xl p-6 sm:p-7 border border-slate-200/80 shadow-sm hover:shadow-md hover:border-blue-400/50 transition-all flex items-start gap-5 group">
+                <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-50 to-cyan-50 text-blue-600 group-hover:from-blue-600 group-hover:to-cyan-500 group-hover:text-white transition-all duration-300 flex items-center justify-center shrink-0 border border-blue-100">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                </div>
+                <div class="flex-1">
+                  <div class="flex items-center justify-between mb-1.5">
+                    <h3 class="font-heading font-extrabold text-base sm:text-lg text-[#0B132B] group-hover:text-blue-600 transition-colors">Fast, focused delivery</h3>
+                    <span class="text-xs font-mono font-bold text-slate-300 group-hover:text-cyan-500 transition-colors">02</span>
+                  </div>
+                  <p class="text-sm text-slate-600 leading-relaxed font-normal">A direct process keeps decisions moving and work aimed at your business goals.</p>
+                </div>
+              </div>
+
+              <!-- Benefit 3 -->
+              <div class="bg-white rounded-3xl p-6 sm:p-7 border border-slate-200/80 shadow-sm hover:shadow-md hover:border-blue-400/50 transition-all flex items-start gap-5 group">
+                <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-50 to-cyan-50 text-blue-600 group-hover:from-blue-600 group-hover:to-cyan-500 group-hover:text-white transition-all duration-300 flex items-center justify-center shrink-0 border border-blue-100">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+                </div>
+                <div class="flex-1">
+                  <div class="flex items-center justify-between mb-1.5">
+                    <h3 class="font-heading font-extrabold text-base sm:text-lg text-[#0B132B] group-hover:text-blue-600 transition-colors">Dedicated support</h3>
+                    <span class="text-xs font-mono font-bold text-slate-300 group-hover:text-cyan-500 transition-colors">03</span>
+                  </div>
+                  <p class="text-sm text-slate-600 leading-relaxed font-normal">Talk to a partner who stays available as your needs evolve.</p>
+                </div>
+              </div>
+
+              <!-- Benefit 4 -->
+              <div class="bg-white rounded-3xl p-6 sm:p-7 border border-slate-200/80 shadow-sm hover:shadow-md hover:border-blue-400/50 transition-all flex items-start gap-5 group">
+                <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-50 to-cyan-50 text-blue-600 group-hover:from-blue-600 group-hover:to-cyan-500 group-hover:text-white transition-all duration-300 flex items-center justify-center shrink-0 border border-blue-100">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/></svg>
+                </div>
+                <div class="flex-1">
+                  <div class="flex items-center justify-between mb-1.5">
+                    <h3 class="font-heading font-extrabold text-base sm:text-lg text-[#0B132B] group-hover:text-blue-600 transition-colors">Modern technology</h3>
+                    <span class="text-xs font-mono font-bold text-slate-300 group-hover:text-cyan-500 transition-colors">04</span>
+                  </div>
+                  <p class="text-sm text-slate-600 leading-relaxed font-normal">Thoughtful tools and current practices support a dependable digital foundation.</p>
+                </div>
+              </div>
+
+              <!-- Benefit 5 -->
+              <div class="bg-white rounded-3xl p-6 sm:p-7 border border-slate-200/80 shadow-sm hover:shadow-md hover:border-blue-400/50 transition-all flex items-start gap-5 group">
+                <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-50 to-cyan-50 text-blue-600 group-hover:from-blue-600 group-hover:to-cyan-500 group-hover:text-white transition-all duration-300 flex items-center justify-center shrink-0 border border-blue-100">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+                </div>
+                <div class="flex-1">
+                  <div class="flex items-center justify-between mb-1.5">
+                    <h3 class="font-heading font-extrabold text-base sm:text-lg text-[#0B132B] group-hover:text-blue-600 transition-colors">Transparent communication</h3>
+                    <span class="text-xs font-mono font-bold text-slate-300 group-hover:text-cyan-500 transition-colors">05</span>
+                  </div>
+                  <p class="text-sm text-slate-600 leading-relaxed font-normal">Clear updates, agreed scope, and no surprises about what happens next.</p>
+                </div>
+              </div>
+
+              <!-- Benefit 6 -->
+              <div class="bg-white rounded-3xl p-6 sm:p-7 border border-slate-200/80 shadow-sm hover:shadow-md hover:border-blue-400/50 transition-all flex items-start gap-5 group">
+                <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-50 to-cyan-50 text-blue-600 group-hover:from-blue-600 group-hover:to-cyan-500 group-hover:text-white transition-all duration-300 flex items-center justify-center shrink-0 border border-blue-100">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+                </div>
+                <div class="flex-1">
+                  <div class="flex items-center justify-between mb-1.5">
+                    <h3 class="font-heading font-extrabold text-base sm:text-lg text-[#0B132B] group-hover:text-blue-600 transition-colors">Privacy-minded work</h3>
+                    <span class="text-xs font-mono font-bold text-slate-300 group-hover:text-cyan-500 transition-colors">06</span>
+                  </div>
+                  <p class="text-sm text-slate-600 leading-relaxed font-normal">Purposeful data collection and practical privacy choices are part of the build.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. WORKING PROCESS (5 STEPS) -->
+      <section class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-3xl mx-auto mb-16">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold tracking-wider uppercase bg-blue-50 text-blue-700 border border-blue-200/80 shadow-sm mb-3">
+              <span class="w-1.5 h-1.5 rounded-full bg-cyan-500"></span>
+              <span>A CLEAR WAY FORWARD</span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-heading font-extrabold text-[#0B132B]">
+              A simple process. Strong <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500">work, together.</span>
+            </h2>
+            <p class="mt-3 text-base text-slate-600 leading-relaxed font-normal">
+              From the first conversation to ongoing care, each stage stays collaborative and clear.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+            <div class="relative bg-[#F8FAFC] rounded-3xl p-6 sm:p-7 border border-slate-200/80 flex flex-col justify-between group hover:bg-white hover:border-blue-400/50 hover:shadow-card-hover transition-all duration-300">
+              <div>
+                <div class="flex items-center justify-between mb-5">
+                  <span class="w-10 h-10 rounded-2xl bg-gradient-to-br from-blue-600 to-cyan-500 text-white font-mono font-bold text-xs flex items-center justify-center shadow-md shadow-blue-500/20">01</span>
+                  <span class="w-2 h-2 rounded-full bg-cyan-400 opacity-60 group-hover:scale-125 transition-transform"></span>
+                </div>
+                <h3 class="font-heading font-extrabold text-lg text-[#0B132B] mb-2 group-hover:text-blue-600 transition-colors">Discover</h3>
+                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">Understand your business, audience, goals, and constraints.</p>
+              </div>
+            </div>
+
+            <div class="relative bg-[#F8FAFC] rounded-3xl p-6 sm:p-7 border border-slate-200/80 flex flex-col justify-between group hover:bg-white hover:border-blue-400/50 hover:shadow-card-hover transition-all duration-300">
+              <div>
+                <div class="flex items-center justify-between mb-5">
+                  <span class="w-10 h-10 rounded-2xl bg-gradient-to-br from-blue-600 to-cyan-500 text-white font-mono font-bold text-xs flex items-center justify-center shadow-md shadow-blue-500/20">02</span>
+                  <span class="w-2 h-2 rounded-full bg-cyan-400 opacity-60 group-hover:scale-125 transition-transform"></span>
+                </div>
+                <h3 class="font-heading font-extrabold text-lg text-[#0B132B] mb-2 group-hover:text-blue-600 transition-colors">Design</h3>
+                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">Shape a clear experience and agree the right scope.</p>
+              </div>
+            </div>
+
+            <div class="relative bg-[#F8FAFC] rounded-3xl p-6 sm:p-7 border border-slate-200/80 flex flex-col justify-between group hover:bg-white hover:border-blue-400/50 hover:shadow-card-hover transition-all duration-300">
+              <div>
+                <div class="flex items-center justify-between mb-5">
+                  <span class="w-10 h-10 rounded-2xl bg-gradient-to-br from-blue-600 to-cyan-500 text-white font-mono font-bold text-xs flex items-center justify-center shadow-md shadow-blue-500/20">03</span>
+                  <span class="w-2 h-2 rounded-full bg-cyan-400 opacity-60 group-hover:scale-125 transition-transform"></span>
+                </div>
+                <h3 class="font-heading font-extrabold text-lg text-[#0B132B] mb-2 group-hover:text-blue-600 transition-colors">Develop</h3>
+                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">Build, review, and refine the solution with you.</p>
+              </div>
+            </div>
+
+            <div class="relative bg-[#F8FAFC] rounded-3xl p-6 sm:p-7 border border-slate-200/80 flex flex-col justify-between group hover:bg-white hover:border-blue-400/50 hover:shadow-card-hover transition-all duration-300">
+              <div>
+                <div class="flex items-center justify-between mb-5">
+                  <span class="w-10 h-10 rounded-2xl bg-gradient-to-br from-blue-600 to-cyan-500 text-white font-mono font-bold text-xs flex items-center justify-center shadow-md shadow-blue-500/20">04</span>
+                  <span class="w-2 h-2 rounded-full bg-cyan-400 opacity-60 group-hover:scale-125 transition-transform"></span>
+                </div>
+                <h3 class="font-heading font-extrabold text-lg text-[#0B132B] mb-2 group-hover:text-blue-600 transition-colors">Deploy</h3>
+                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">Prepare the launch and hand over a solution you can use.</p>
+              </div>
+            </div>
+
+            <div class="relative bg-[#F8FAFC] rounded-3xl p-6 sm:p-7 border border-slate-200/80 flex flex-col justify-between group hover:bg-white hover:border-blue-400/50 hover:shadow-card-hover transition-all duration-300">
+              <div>
+                <div class="flex items-center justify-between mb-5">
+                  <span class="w-10 h-10 rounded-2xl bg-gradient-to-br from-blue-600 to-cyan-500 text-white font-mono font-bold text-xs flex items-center justify-center shadow-md shadow-blue-500/20">05</span>
+                  <span class="w-2 h-2 rounded-full bg-cyan-400 opacity-60 group-hover:scale-125 transition-transform"></span>
+                </div>
+                <h3 class="font-heading font-extrabold text-lg text-[#0B132B] mb-2 group-hover:text-blue-600 transition-colors">Support</h3>
+                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">Keep improving with practical maintenance and guidance.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. TECHNOLOGY STACK MARQUEE / GRID -->
+      <section class="py-16 bg-[#070D1E] text-white relative overflow-hidden border-y border-cyan-500/10" aria-label="Technology and platforms">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 text-center">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-bold tracking-wider uppercase text-cyan-300 mb-2">
+            <span>TOOLS THAT MAKE THE WORK WORK</span>
+          </div>
+          <p class="text-sm text-slate-300">
+            Selected to fit the project, not the other way around.
+          </p>
+        </div>
+
+        <div class="max-w-5xl mx-auto px-4 flex flex-wrap items-center justify-center gap-3">
+          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.04] border border-white/10 text-xs sm:text-sm font-semibold text-slate-200 hover:border-cyan-400 hover:text-cyan-300 hover:bg-cyan-950/30 transition-all duration-200 shadow-sm"><svg class="w-3.5 h-3.5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg><span>React</span></span>
+          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.04] border border-white/10 text-xs sm:text-sm font-semibold text-slate-200 hover:border-cyan-400 hover:text-cyan-300 hover:bg-cyan-950/30 transition-all duration-200 shadow-sm"><svg class="w-3.5 h-3.5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg><span>Node.js</span></span>
+          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.04] border border-white/10 text-xs sm:text-sm font-semibold text-slate-200 hover:border-cyan-400 hover:text-cyan-300 hover:bg-cyan-950/30 transition-all duration-200 shadow-sm"><svg class="w-3.5 h-3.5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg><span>WordPress</span></span>
+          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.04] border border-white/10 text-xs sm:text-sm font-semibold text-slate-200 hover:border-cyan-400 hover:text-cyan-300 hover:bg-cyan-950/30 transition-all duration-200 shadow-sm"><svg class="w-3.5 h-3.5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg><span>Shopify</span></span>
+          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.04] border border-white/10 text-xs sm:text-sm font-semibold text-slate-200 hover:border-cyan-400 hover:text-cyan-300 hover:bg-cyan-950/30 transition-all duration-200 shadow-sm"><svg class="w-3.5 h-3.5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg><span>JavaScript</span></span>
+          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.04] border border-white/10 text-xs sm:text-sm font-semibold text-slate-200 hover:border-cyan-400 hover:text-cyan-300 hover:bg-cyan-950/30 transition-all duration-200 shadow-sm"><svg class="w-3.5 h-3.5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg><span>HTML & CSS</span></span>
+          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.04] border border-white/10 text-xs sm:text-sm font-semibold text-slate-200 hover:border-cyan-400 hover:text-cyan-300 hover:bg-cyan-950/30 transition-all duration-200 shadow-sm"><svg class="w-3.5 h-3.5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg><span>Google Business Profile</span></span>
+          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.04] border border-white/10 text-xs sm:text-sm font-semibold text-slate-200 hover:border-cyan-400 hover:text-cyan-300 hover:bg-cyan-950/30 transition-all duration-200 shadow-sm"><svg class="w-3.5 h-3.5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg><span>E-commerce</span></span>
+          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.04] border border-white/10 text-xs sm:text-sm font-semibold text-slate-200 hover:border-cyan-400 hover:text-cyan-300 hover:bg-cyan-950/30 transition-all duration-200 shadow-sm"><svg class="w-3.5 h-3.5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg><span>SEO</span></span>
+        </div>
+      </section>
+
+      <!-- 7. TESTIMONIALS SLIDER -->
+      <section id="testimonial-slider" class="py-24 bg-[#F8FAFC] relative overflow-hidden border-b border-slate-200/80">
+        <div class="absolute top-1/2 left-0 w-80 h-80 bg-blue-600/5 rounded-full blur-3xl pointer-events-none -translate-y-1/2"></div>
+        <div class="absolute top-1/2 right-0 w-80 h-80 bg-cyan-400/5 rounded-full blur-3xl pointer-events-none -translate-y-1/2"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-5 space-y-5">
+              <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold tracking-wider uppercase bg-blue-50 text-blue-700 border border-blue-200/80 shadow-sm">
+                <span class="w-1.5 h-1.5 rounded-full bg-cyan-500"></span>
+                <span>A SAMPLE, NOT A CLAIM</span>
+              </div>
+
+              <h2 class="text-2xl sm:text-3xl md:text-4xl font-heading font-extrabold tracking-tight text-[#0B132B] leading-tight">
+                Good work starts with <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">a good conversation.</span>
+              </h2>
+
+              <p class="text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
+                These sample lines show the style of feedback we hope to earn. They are not client reviews and must be replaced with approved testimonials.
+              </p>
+
+              <div class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-amber-50 border border-amber-200 text-xs font-semibold text-amber-800">
+                <svg class="w-3.5 h-3.5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                <span>Sample content — not a client endorsement</span>
+              </div>
+            </div>
+
+            <div class="lg:col-span-7">
+              <div class="relative bg-white rounded-3xl p-8 sm:p-12 shadow-card-subtle border border-slate-200/80 hover:shadow-card-hover transition-all duration-300">
+                <div class="absolute top-8 right-8 text-blue-100 pointer-events-none">
+                  <svg class="w-14 h-14 fill-current" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+                </div>
+
+                <div class="min-h-[160px] flex flex-col justify-center">
+                  <blockquote id="testimonial-quote" class="text-lg sm:text-xl font-medium text-[#0B132B] leading-relaxed italic relative z-10 transition-all duration-150">
+                    “The team made our website project feel clear and manageable, from the first conversation to launch.”
+                  </blockquote>
+                  <p id="testimonial-source" class="mt-6 text-xs sm:text-sm text-slate-500 font-semibold transition-all duration-150">
+                    Sample testimonial — replace with an approved client review.
+                  </p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-slate-100 flex items-center justify-between">
+                  <span id="testimonial-counter" class="font-heading text-xs font-bold tracking-wider text-slate-400">
+                    <span class="text-blue-600 text-sm font-extrabold">01</span> / 03
+                  </span>
+
+                  <div class="flex items-center gap-2">
+                    <button id="testimonial-prev" type="button" aria-label="Previous sample quote" class="w-10 h-10 rounded-full border border-slate-200 bg-white hover:bg-blue-50 hover:border-blue-300 text-slate-700 hover:text-blue-600 flex items-center justify-center transition-all shadow-sm active:scale-95">
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                    </button>
+                    <button id="testimonial-next" type="button" aria-label="Next sample quote" class="w-10 h-10 rounded-full border border-slate-200 bg-white hover:bg-blue-50 hover:border-blue-300 text-slate-700 hover:text-blue-600 flex items-center justify-center transition-all shadow-sm active:scale-95">
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8. FINAL CTA SECTION -->
+      <section class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="relative rounded-3xl bg-gradient-to-r from-[#070D1E] via-[#0E1E42] to-[#08122B] text-white p-8 sm:p-14 lg:p-16 overflow-hidden shadow-2xl border border-cyan-500/20">
+            <div class="absolute top-0 right-0 w-[450px] h-[450px] bg-blue-600/25 rounded-full blur-[100px] pointer-events-none"></div>
+            <div class="absolute bottom-0 left-0 w-[450px] h-[450px] bg-cyan-500/20 rounded-full blur-[100px] pointer-events-none"></div>
+
+            <div class="relative z-10 max-w-3xl space-y-4">
+              <p class="text-cyan-400 text-xs font-extrabold tracking-wider uppercase">
+                YOUR NEXT STEP STARTS HERE
+              </p>
+              <h2 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-white leading-tight">
+                Ready to take your business <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-300 to-blue-400">online?</span>
+              </h2>
+              <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl font-normal">
+                Share what you’re working toward. We’ll help you find a practical way forward.
+              </p>
+              <div class="pt-4">
+                <a href="contact.html" class="inline-flex items-center gap-2.5 bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 hover:from-blue-500 hover:via-indigo-500 hover:to-cyan-400 text-white font-bold text-base px-8 py-4 rounded-full shadow-lg shadow-blue-600/35 border border-white/20 transition-all duration-200 hover:-translate-y-0.5">
+                  <span>Start a conversation</span>
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#070D1E] text-slate-300 pt-16 pb-12 border-t border-cyan-500/15 relative overflow-hidden">
+      <div class="absolute top-0 left-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none -translate-y-1/2"></div>
+      <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-cyan-400/10 rounded-full blur-3xl pointer-events-none translate-y-1/2"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-white/10">
+          <div class="lg:col-span-4 space-y-5">
+            <a href="index.html" class="inline-block focus:outline-none focus:ring-2 focus:ring-accent rounded-xl">
+              <img src="logo.png" alt="RAR Consultant" class="h-11 w-auto object-contain" loading="lazy" />
+            </a>
+            <p class="text-slate-300 text-sm leading-relaxed pr-4 font-normal">
+              Practical digital services for ambitious small and local businesses across India. All IT Solutions Under One Roof.
+            </p>
+            <div class="space-y-3 pt-2">
+              <a href="tel:+919158030333" class="flex items-center gap-3 text-sm text-slate-200 hover:text-cyan-400 transition-colors group">
+                <span class="w-8 h-8 rounded-full bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center group-hover:border-cyan-400 group-hover:bg-cyan-500/20 transition-all">
+                  <svg class="w-3.5 h-3.5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                </span>
+                <span class="font-semibold">+91 91580 30333</span>
+              </a>
+              <a href="mailto:dumbresanskar23@gmail.com" class="flex items-center gap-3 text-sm text-slate-200 hover:text-cyan-400 transition-colors group">
+                <span class="w-8 h-8 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center group-hover:border-cyan-400 group-hover:bg-blue-500/20 transition-all">
+                  <svg class="w-3.5 h-3.5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                </span>
+                <span class="font-semibold">dumbresanskar23@gmail.com</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="lg:col-span-2 space-y-4">
+            <h2 class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400 font-heading font-extrabold text-xs tracking-widest uppercase">
+              Explore
+            </h2>
+            <ul class="space-y-2.5 text-sm">
+              <li><a href="index.html" class="text-slate-300 hover:text-white transition-colors font-medium">Home</a></li>
+              <li><a href="about.html" class="text-slate-300 hover:text-white transition-colors font-medium">About</a></li>
+              <li><a href="services.html" class="text-slate-300 hover:text-white transition-colors font-medium">Services</a></li>
+              <li><a href="contact.html" class="text-slate-300 hover:text-white transition-colors font-medium">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="lg:col-span-3 space-y-4">
+            <h2 class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400 font-heading font-extrabold text-xs tracking-widest uppercase">
+              Services
+            </h2>
+            <ul class="space-y-2.5 text-sm">
+              <li><a href="contact.html?service=website-development" class="text-slate-300 hover:text-white transition-colors flex items-center justify-between group font-medium"><span>Website Development</span><svg class="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg></a></li>
+              <li><a href="contact.html?service=custom-software-development" class="text-slate-300 hover:text-white transition-colors flex items-center justify-between group font-medium"><span>Custom Software Development</span><svg class="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg></a></li>
+              <li><a href="contact.html?service=search-engine-optimization" class="text-slate-300 hover:text-white transition-colors flex items-center justify-between group font-medium"><span>Search Engine Optimization (SEO)</span><svg class="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg></a></li>
+              <li><a href="contact.html?service=e-commerce-platform-portal" class="text-slate-300 hover:text-white transition-colors flex items-center justify-between group font-medium"><span>E-Commerce Platform / Portal</span><svg class="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg></a></li>
+              <li><a href="contact.html?service=local-business-digital-setup" class="text-slate-300 hover:text-white transition-colors flex items-center justify-between group font-medium"><span>Local Business Digital Setup</span><svg class="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg></a></li>
+              <li><a href="contact.html?service=website-maintenance" class="text-slate-300 hover:text-white transition-colors flex items-center justify-between group font-medium"><span>Website Maintenance</span><svg class="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg></a></li>
+            </ul>
+          </div>
+
+          <div class="lg:col-span-3 space-y-4">
+            <h2 class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400 font-heading font-extrabold text-xs tracking-widest uppercase">
+              Legal & Privacy
+            </h2>
+            <ul class="space-y-2.5 text-sm">
+              <li><a href="privacy-policy.html" class="text-slate-300 hover:text-white transition-colors font-medium">Privacy Policy</a></li>
+              <li><a href="terms-and-conditions.html" class="text-slate-300 hover:text-white transition-colors font-medium">Terms and Conditions</a></li>
+              <li>
+                <button type="button" class="open-cookie-settings text-slate-300 hover:text-cyan-400 transition-colors flex items-center gap-2 text-left font-medium">
+                  <svg class="w-3.5 h-3.5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/></svg>
+                  <span>Cookie Settings</span>
+                </button>
+              </li>
+            </ul>
+
+            <div class="mt-6 p-4 rounded-2xl bg-white/[0.04] border border-cyan-500/20 text-xs text-slate-300 space-y-1">
+              <div class="flex items-center gap-2 text-cyan-400 font-bold">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                <span>DPDP Act Compliant</span>
+              </div>
+              <p class="leading-relaxed text-slate-400">
+                Respecting your digital personal data protection rights under Indian law.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+          <p>© 2026 RAR Consultant. All rights reserved.</p>
+          <p class="flex items-center gap-2 text-center sm:text-right">
+            <span>Compliant with India's Digital Personal Data Protection Act, 2023.</span>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating Quick Actions -->
+    <div class="fixed bottom-6 right-6 z-40 flex flex-col items-center gap-3.5" aria-label="Quick contact options">
+      <a href="https://wa.me/919158030333?text=Hello%20RAR%20Consultant%2C%20I%20would%20like%20to%20enquire%20about%20your%20services." target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" title="Chat on WhatsApp" class="group relative w-13 h-13 p-3.5 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-xl shadow-emerald-500/35 hover:scale-110 active:scale-95 transition-all duration-200 border border-white/20">
+        <span class="absolute -inset-1 rounded-full bg-[#25D366]/40 animate-ping opacity-60 pointer-events-none"></span>
+        <svg class="w-6 h-6 fill-current relative z-10" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+        <span class="absolute right-16 bg-[#070D1E] text-white text-xs font-bold px-3 py-1.5 rounded-xl shadow-xl opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity whitespace-nowrap border border-white/10">WhatsApp Us</span>
+      </a>
+
+      <a href="tel:+919158030333" aria-label="Call +91 91580 30333" title="Call +91 91580 30333" class="group relative w-13 h-13 p-3.5 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 text-white flex items-center justify-center shadow-xl shadow-blue-500/35 hover:scale-110 active:scale-95 transition-all duration-200 border border-white/20">
+        <svg class="w-5 h-5 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+        <span class="absolute right-16 bg-[#070D1E] text-white text-xs font-bold px-3 py-1.5 rounded-xl shadow-xl opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity whitespace-nowrap border border-white/10">+91 91580 30333</span>
+      </a>
+    </div>
+
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" role="region" aria-label="Cookie preferences" class="hidden fixed bottom-4 left-4 right-4 sm:left-auto sm:right-6 sm:max-w-md md:max-w-lg z-50">
+      <div class="bg-[#070D1E]/95 text-white backdrop-blur-2xl p-6 rounded-3xl shadow-2xl border border-cyan-500/20">
+        <div class="flex items-start justify-between gap-4 mb-4">
+          <div class="flex items-center gap-3">
+            <span class="w-10 h-10 rounded-2xl bg-cyan-500/15 border border-cyan-400/30 flex items-center justify-center text-cyan-300 shadow-sm">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2a10 10 0 1010 10A10 10 0 0012 2zm-3.5 6.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm7 7a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm-3.5-3.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/></svg>
+            </span>
+            <h2 id="cookie-banner-title" class="font-heading font-extrabold text-base sm:text-lg text-white">Your privacy matters</h2>
+          </div>
+          <button id="cookie-close" type="button" class="text-slate-400 hover:text-white p-1 rounded-lg transition-colors" aria-label="Close cookie banner">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
+        </div>
+
+        <div id="cookie-simple-view">
+          <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-6 font-normal">
+            Essential storage keeps this site working. Optional preferences and analytics stay off unless you choose them. You can change your choice anytime in Cookie Settings. Read our <a href="privacy-policy.html" class="text-cyan-400 font-semibold underline hover:text-cyan-300 transition-colors">Privacy Policy</a>.
+          </p>
+          <div class="flex flex-wrap items-center gap-2.5 pt-1">
+            <button id="cookie-reject" type="button" class="px-3.5 py-2.5 text-xs font-semibold rounded-2xl bg-white/10 hover:bg-white/15 text-slate-200 transition-colors">Reject Non-Essential</button>
+            <button id="cookie-manage" type="button" class="px-3.5 py-2.5 text-xs font-semibold rounded-2xl bg-white/10 hover:bg-white/15 text-slate-200 transition-colors">Manage Preferences</button>
+            <button id="cookie-accept-all" type="button" class="flex-1 sm:flex-none px-5 py-2.5 text-xs font-bold rounded-2xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white hover:opacity-95 shadow-md shadow-blue-600/30 transition-all">Accept All</button>
+          </div>
+        </div>
+
+        <div id="cookie-manage-view" class="hidden">
+          <div class="space-y-3 mb-6">
+            <div class="flex items-start justify-between gap-3 p-3.5 rounded-2xl bg-white/[0.04] border border-white/10">
+              <div>
+                <strong class="block text-sm font-bold text-white">Essential</strong>
+                <small class="text-xs text-slate-300">Needed for basic site features; always on.</small>
+              </div>
+              <input type="checkbox" checked disabled class="mt-1 h-4 w-4 rounded accent-blue-600 cursor-not-allowed opacity-75" aria-label="Essential cookies always active" />
+            </div>
+            <label class="flex items-start justify-between gap-3 p-3.5 rounded-2xl bg-white/[0.04] border border-white/10 hover:border-cyan-500/40 cursor-pointer transition-colors">
+              <div>
+                <strong class="block text-sm font-bold text-white">Preferences</strong>
+                <small class="text-xs text-slate-300">Remember optional interface choices.</small>
+              </div>
+              <input id="cookie-pref-checkbox" type="checkbox" class="mt-1 h-4 w-4 rounded accent-blue-600 cursor-pointer" />
+            </label>
+            <label class="flex items-start justify-between gap-3 p-3.5 rounded-2xl bg-white/[0.04] border border-white/10 hover:border-cyan-500/40 cursor-pointer transition-colors">
+              <div>
+                <strong class="block text-sm font-bold text-white">Analytics</strong>
+                <small class="text-xs text-slate-300">No analytics are active by default.</small>
+              </div>
+              <input id="cookie-analytics-checkbox" type="checkbox" class="mt-1 h-4 w-4 rounded accent-blue-600 cursor-pointer" />
+            </label>
+          </div>
+          <div class="flex flex-wrap items-center gap-2.5 pt-1">
+            <button onclick="document.getElementById('cookie-reject').click()" type="button" class="flex-1 px-4 py-2.5 text-xs font-bold rounded-2xl bg-white/10 hover:bg-white/15 text-slate-200 transition-colors">Reject non-essential</button>
+            <button id="cookie-save-prefs" type="button" class="flex-1 px-4 py-2.5 text-xs font-bold rounded-2xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white hover:opacity-95 shadow-md shadow-blue-500/25 transition-opacity">Save preferences</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCRIPT -->
+    <script src="js/main.js"></script>
   </body>
 </html>
-
